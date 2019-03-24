@@ -71,8 +71,27 @@ public class Main {
 
     }
 
-    private static void csempeDolog(){
-
+    private static void csempeDolog() throws IOException {
+        LOGGER.info("Mi van a csempen?\n"
+                + "\t1 - Panda\n"
+                + "\t2 - Szekreny\n"
+                + "\t3 - Kijarat\n"
+                + "\t4 - Egyeb");
+       String order = bufferRead.readLine();
+        switch (order) {
+        case "1":
+            LOGGER.info("A panda elkapasa");
+            break;
+        case "2":
+            LOGGER.info("Belepes a szekrenybe");
+            break;
+        case "3":
+            LOGGER.info("Kilepes a kiajraton");
+            break;
+        default:
+            LOGGER.info("Lepes a csempere");
+            break;
+        }
     }
 
     private static void die() {
