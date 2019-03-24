@@ -35,8 +35,8 @@ public abstract class Animal {
 	 * 
 	 * @param toTile
 	 */
-	public void move(Tile toTile){
-
+	public void move(Tile t){
+		t.steppedOn(this);
 	}
 
 	public void scaredFromBeep(){

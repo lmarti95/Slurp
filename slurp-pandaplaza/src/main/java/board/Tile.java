@@ -41,6 +41,7 @@ public class Tile  {
 	 * @param animal
 	 */
 	public void steppedOn(Animal animal){
-
+		animal.leavePrevLocation();
+		reduceDurability();
 	}
 }//end Tile

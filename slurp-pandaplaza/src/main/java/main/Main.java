@@ -42,7 +42,7 @@ public class Main {
 
     private static void orangutanMove() throws IOException {
         LOGGER.info("Van panda a jatekteren?:\n"
-                + "\t1 -igen\n"
+                + "\t1 - igen\n"
                 + "\t2 - nem");
         String order = bufferRead.readLine();
         switch (order) {
