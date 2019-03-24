@@ -11,6 +11,8 @@ public class Game {
 
 	private static Map map;
 
+
+	//új játék indítása
 	public Game(){
 		map = new Map();
 	}

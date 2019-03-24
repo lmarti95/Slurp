@@ -9,16 +9,11 @@ import characters.Animal;
  */
 public class Tile  {
 
-	/**
-	 * <ul>
-	 * 	<li>gyenge csempe kezdeti �rt�ke 20</li>
-	 * </ul>
-	 * <ul>
-	 * 	<li>er�s csempe -1</li>
-	 * 	<li>t�r�tt csempe 0</li>
-	 * </ul>
-	 */
+	
 	private Animal animal;
+	//Erős csempe értéke: -1
+	//Gyenge csempe kezdeti értéke: 20
+	//Törött csempe értéke: 0
 	private int durability;
 
 	public Tile(){
@@ -29,18 +24,7 @@ public class Tile  {
 
 	}
 
-	/**
-	 * Vizsg�lja a csempe durability-j�t
-	 * <ul>
-	 * 	<li>ha > 0 cs�kken eggyel �s elfogadja az �llatot</li>
-	 * 	<li>ha 0 az �llat meghal</li>
-	 * 	<li>ha -1 elfogadja az �llatot</li>
-	 * </ul>
-	 * 
-	 * Hogyan kapja el az or�ngut�n az ott �ll� pand�t?
-	 * 
-	 * @param animal
-	 */
+	//Ha rálép egy állat a csempére akkor megnézni, hogy nem törött-e
 	public void steppedOn(Animal animal){
 		animal.leavePrevLocation(this);
 		reduceDurability();

@@ -11,7 +11,9 @@ import game.Timer;
  */
 public class Map {
 
+	//bejárat
 	private Tile entry;
+
 	private Tile tileslist;
 
 	public Map(){
@@ -21,10 +23,7 @@ public class Map {
 	public void finalize() throws Throwable {
 
 	}
-	/**
-	 * 
-	 * @param panda
-	 */
+	//Pandát helyezünk el a játéktéren
 	public void placePanda(Panda panda){
 		panda.setLocation(new Tile());
 		Timer.addSteppable(panda);

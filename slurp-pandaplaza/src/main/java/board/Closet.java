@@ -11,16 +11,14 @@ import game.Steppable;
  */
 public class Closet extends Tile {
 
+	//másik szekrény
 	private Tile otherCloset;
 
 	public Closet(){
 		otherCloset = new Tile();
 	}
 
-	/**
-	 * 
-	 * @param animal
-	 */
+	//ha egy állat rálép a székrenyre, akkor átrakjuk a másik szekrényre
 	public void steppedOn(Animal animal){
 		animal.leavePrevLocation(this);
 		animal.setLocation(otherCloset);

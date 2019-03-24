@@ -12,13 +12,18 @@ public class Player {
 	private int life;
 	private static int points;
 
+	//Új játékos létrehozása
 	public Player(){
 		points = 0;
 	}
 
+
+	//Új játékos kap pontot
 	public void finalize() throws Throwable {
 
 	}
+
+	//Játé
 	public static void addPoints(){
 		points++;
 	}
@@ -27,14 +32,7 @@ public class Player {
 		return points;
 	}
 
-	/**
-	 * csemp�n van �llat
-	 *       catch(�llat)
-	 * nincs �llat
-	 *      move(tile)
-	 * 
-	 * @param tile
-	 */
+
 	public void click(Tile tile){
 
 	}

@@ -18,6 +18,7 @@ public abstract class Panda extends Animal implements Steppable {
 
 	}
 
+	//Panda kimegy a kijáraton és kap pontot
 	public void exit(){
 		Player.addPoints();
 	}

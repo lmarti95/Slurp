@@ -16,24 +16,20 @@ public class Orangutan extends Animal {
 
 	}
 
-	/**
-	 * Az or�ngut�nt eddig k�zvetlen k�vet� panda (follower), az �j pand�t k�veti (az
-	 * �j panda followre lesz) az or�ngut�n followere pedig az �j panda lesz.
-	 * 
-	 * id�k�zben az �j panda �s or�ngut�n helyetcser�l
-	 *
-	 * Az osztalydiagramhoz kepest at kellett neveznunk ezt a metodust, mert javas beepítettel utkozott.
-	 * 
-	 * @param animal
-	 */
+	
+	 //Az osztalydiagramhoz kepest at kellett neveznunk ezt a metodust,
+	 //mert javas beepítettel utkozott. (Catch())
+	//Panda elkapása
 	public void catchAnimal(Panda panda){
 			Timer.removeSteppable(panda);
+			//Panda követőinek átállítása
 			if(getFollower()!=null){
 				this.getFollower().setFollowed(panda);
 				panda.setFollower(getFollower());
 			}
 			setFollower(panda);
 			panda.setFollowed(this);
+			//A panda és az orángután helyet cserél
 			setLocation(panda.getLocation());
 			panda.setLocation(getLocation());
 			getLocation().setAnimal(this);

@@ -23,24 +23,20 @@ public abstract class Animal {
 
 	}
 
+	//Az orángután kilép, a Panda exit metódusa felül van definiálva
 	public void exit(){
 		follower = null;
 		Game.getMap().getEntry().steppedOn(this);
 	}
 
-	/**
-	 * Jelenlegi csempe removeAnimel() met�dus�t h�vja
-	 */
+	//Elhagyja az állat a csempét
 	public void leavePrevLocation(Tile t){
 		oldLocation = location;
 		location = t;
 		oldLocation.setAnimal(null);
 	}
 
-	/**
-	 * 
-	 * @param toTile
-	 */
+	//Allat es a kovetoi masik csempere mennek at
 	public void move(Tile t){
 		
 		t.steppedOn(this);

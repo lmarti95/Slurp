@@ -10,6 +10,7 @@ public class Timer {
 	private Steppable steppablesList;
 	private static Timer single_instance=null;
 
+	//Singleton Timer osztály létrehozása
 	public Timer(){
 		single_instance = this;
 	}

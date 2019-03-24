@@ -15,13 +15,13 @@ public class Exit extends Tile {
 
 	}
 
-	/**
-	 * 
-	 * @param animal
-	 */
+	//Az allatnak meghivodik a steppedOn metodusa ha ralep az exitre
 	public void steppedOn(Animal animal){
+			//Az orangutantol lekerdezzuk a pandat ha koveti ot panda
 			Panda p = animal.getFollower();
+			//orangutan kkilep
 			animal.exit();
+			//A pandasor vegig lepked az exiten
 			while(p != null){
 				p.exit();
 				this.setAnimal(null);
