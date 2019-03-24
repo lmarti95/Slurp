@@ -10,17 +10,21 @@ import board.Tile;
 public class Player {
 
 	private int life;
-	private int points;
+	private static int points;
 
 	public Player(){
-
+		points = 0;
 	}
 
 	public void finalize() throws Throwable {
 
 	}
-	public void addPoints(){
+	public static void addPoints(){
+		points++;
+	}
 
+	public static int getPoints(){
+		return points;
 	}
 
 	/**

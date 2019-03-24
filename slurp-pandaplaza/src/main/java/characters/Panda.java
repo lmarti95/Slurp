@@ -2,6 +2,7 @@ package characters;
 
 import characters.Animal;
 import game.Steppable;
+import game.Player;
 
 /**
  * @author User
@@ -18,11 +19,17 @@ public abstract class Panda extends Animal implements Steppable {
 	}
 
 	public void exit(){
-
+		Player.addPoints();
 	}
 
 	public void step(){
 
+	}
+	public Animal getFollowed(){
+		return followed;
+	}
+	public void setFollowed(Animal a){
+		followed = a;
 	}
 
 }//end Panda

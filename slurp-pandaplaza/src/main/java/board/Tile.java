@@ -18,6 +18,7 @@ public class Tile  {
 	 * 	<li>t�r�tt csempe 0</li>
 	 * </ul>
 	 */
+	private Animal animal;
 	private int durability;
 
 	public Tile(){
@@ -41,7 +42,11 @@ public class Tile  {
 	 * @param animal
 	 */
 	public void steppedOn(Animal animal){
-		animal.leavePrevLocation();
+		animal.leavePrevLocation(this);
 		reduceDurability();
+		setAnimal(animal);
+	}
+	public void setAnimal(Animal a){
+		animal = a;
 	}
 }//end Tile

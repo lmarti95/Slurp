@@ -9,21 +9,25 @@ import board.Map;
  */
 public class Game {
 
-	private Map map;
+	private static Map map;
 
 	public Game(){
-
+		map = new Map();
 	}
 
 	public void endGame(){
 
 	}
 
-	private void initMap(){
+	public void initMap(){
 
 	}
 
 	public void newGame(){
 
+	}
+
+	public static Map getMap(){
+		return map;
 	}
 }//end Game

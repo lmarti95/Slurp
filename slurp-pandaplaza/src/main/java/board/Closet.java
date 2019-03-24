@@ -11,10 +11,10 @@ import game.Steppable;
  */
 public class Closet extends Tile {
 
-	private Closet otherCloset;
+	private Tile otherCloset;
 
 	public Closet(){
-
+		otherCloset = new Tile();
 	}
 
 	/**
@@ -22,6 +22,8 @@ public class Closet extends Tile {
 	 * @param animal
 	 */
 	public void steppedOn(Animal animal){
-
+		animal.leavePrevLocation(this);
+		animal.setLocation(otherCloset);
+		otherCloset.setAnimal(animal);
 	}
 }//end Closet

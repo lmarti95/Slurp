@@ -8,9 +8,10 @@ package game;
 public class Timer {
 
 	private Steppable steppablesList;
+	private static Timer single_instance=null;
 
 	public Timer(){
-
+		single_instance = this;
 	}
 
 	public void finalize() throws Throwable {
@@ -20,7 +21,7 @@ public class Timer {
 	 * 
 	 * @param steppable
 	 */
-	public void addSteppable(Steppable steppable){
+	public static void addSteppable(Steppable steppable){
 
 	}
 
@@ -28,7 +29,7 @@ public class Timer {
 	 * 
 	 * @param steppable
 	 */
-	public void removeSteppable(Steppable steppable){
+	public static void removeSteppable(Steppable steppable){
 
 	}
 

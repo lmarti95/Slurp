@@ -2,6 +2,7 @@
 package board;
 
 import characters.Animal;
+import characters.Panda;
 
 /**
  * @author User
@@ -19,6 +20,13 @@ public class Exit extends Tile {
 	 * @param animal
 	 */
 	public void steppedOn(Animal animal){
-
+			Panda p = animal.getFollower();
+			animal.exit();
+			while(p != null){
+				p.exit();
+				this.setAnimal(null);
+				p.setLocation(null);
+				p  = p.getFollower();
+			}
 	}
 }//end Exit

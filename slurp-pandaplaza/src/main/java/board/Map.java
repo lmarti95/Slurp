@@ -2,6 +2,7 @@
 package board;
 
 import characters.Panda;
+import game.Timer;
 
 /**
  * @author User
@@ -14,7 +15,7 @@ public class Map {
 	private Tile tileslist;
 
 	public Map(){
-
+		entry = new Tile();
 	}
 
 	public void finalize() throws Throwable {
@@ -25,6 +26,11 @@ public class Map {
 	 * @param panda
 	 */
 	public void placePanda(Panda panda){
+		panda.setLocation(new Tile());
+		Timer.addSteppable(panda);
+	}
 
+	public Tile getEntry(){
+		return entry;
 	}
 }//end Map
