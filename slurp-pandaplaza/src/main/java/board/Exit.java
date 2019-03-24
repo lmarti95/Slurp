@@ -1,9 +1,12 @@
 
+package board;
+
+import characters.Animal;
 
 /**
  * @author User
  * @version 1.0
- * @created 24-márc.-2019 11:30:51
+ * @created 24-mï¿½rc.-2019 11:30:51
  */
 public class Exit extends Tile {
 
@@ -11,9 +14,6 @@ public class Exit extends Tile {
 
 	}
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
 	/**
 	 * 
 	 * @param animal

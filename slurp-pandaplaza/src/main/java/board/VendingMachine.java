@@ -1,9 +1,13 @@
 
+package board;
+
+import characters.Animal;
+import game.Steppable;
 
 /**
  * @author User
  * @version 1.0
- * @created 24-márc.-2019 11:31:11
+ * @created 24-mï¿½rc.-2019 11:31:11
  */
 public class VendingMachine extends Tile implements Steppable {
 

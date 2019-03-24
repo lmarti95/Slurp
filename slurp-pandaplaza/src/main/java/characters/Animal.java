@@ -1,23 +1,21 @@
+package characters;
 
+import board.Tile;
 
 /**
  * @author User
  * @version 1.0
- * @created 24-márc.-2019 11:30:33
+ * @created 24-mï¿½rc.-2019 11:30:33
  */
 public abstract class Animal {
 
 	private Animal follower;
 	private Tile location;
-	public Tile m_Tile;
 
 	public Animal(){
 
 	}
 
-	public void finalize() throws Throwable {
-
-	}
 	public void die(){
 
 	}
@@ -27,7 +25,7 @@ public abstract class Animal {
 	}
 
 	/**
-	 * Jelenlegi csempe removeAnimel() metódusát hívja
+	 * Jelenlegi csempe removeAnimel() metï¿½dusï¿½t hï¿½vja
 	 */
 	public void leavePrevLocation(){
 

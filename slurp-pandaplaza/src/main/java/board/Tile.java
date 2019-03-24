@@ -1,19 +1,21 @@
+package board;
 
+import characters.Animal;
 
 /**
  * @author User
  * @version 1.0
- * @created 24-márc.-2019 11:31:08
+ * @created 24-mï¿½rc.-2019 11:31:08
  */
-public class Tile extends Tile {
+public class Tile  {
 
 	/**
 	 * <ul>
-	 * 	<li>gyenge csempe kezdeti értéke 20</li>
+	 * 	<li>gyenge csempe kezdeti ï¿½rtï¿½ke 20</li>
 	 * </ul>
 	 * <ul>
-	 * 	<li>erõs csempe -1</li>
-	 * 	<li>törött csempe 0</li>
+	 * 	<li>erï¿½s csempe -1</li>
+	 * 	<li>tï¿½rï¿½tt csempe 0</li>
 	 * </ul>
 	 */
 	private int durability;
@@ -22,22 +24,19 @@ public class Tile extends Tile {
 
 	}
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
 	public void reduceDurability(){
 
 	}
 
 	/**
-	 * Vizsgálja a csempe durability-jét
+	 * Vizsgï¿½lja a csempe durability-jï¿½t
 	 * <ul>
-	 * 	<li>ha > 0 csökken eggyel és elfogadja az állatot</li>
-	 * 	<li>ha 0 az állat meghal</li>
-	 * 	<li>ha -1 elfogadja az állatot</li>
+	 * 	<li>ha > 0 csï¿½kken eggyel ï¿½s elfogadja az ï¿½llatot</li>
+	 * 	<li>ha 0 az ï¿½llat meghal</li>
+	 * 	<li>ha -1 elfogadja az ï¿½llatot</li>
 	 * </ul>
 	 * 
-	 * Hogyan kapja el az orángután az ott álló pandát?
+	 * Hogyan kapja el az orï¿½ngutï¿½n az ott ï¿½llï¿½ pandï¿½t?
 	 * 
 	 * @param animal
 	 */

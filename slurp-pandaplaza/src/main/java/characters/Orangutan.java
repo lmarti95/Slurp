@@ -1,28 +1,27 @@
-
+package characters;
 
 /**
  * @author User
  * @version 1.0
- * @created 24-márc.-2019 11:30:57
+ * @created 24-mï¿½rc.-2019 11:30:57
  */
-public class Orangutan extends Animal implements Animal {
+public class Orangutan extends Animal {
 
 	public Orangutan(){
 
 	}
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
 	/**
-	 * Az orángutánt eddig közvetlen követõ panda (follower), az új pandát követi (az
-	 * új panda followre lesz) az orángután followere pedig az új panda lesz.
+	 * Az orï¿½ngutï¿½nt eddig kï¿½zvetlen kï¿½vetï¿½ panda (follower), az ï¿½j pandï¿½t kï¿½veti (az
+	 * ï¿½j panda followre lesz) az orï¿½ngutï¿½n followere pedig az ï¿½j panda lesz.
 	 * 
-	 * idõközben az új panda és orángután helyetcserél
+	 * idï¿½kï¿½zben az ï¿½j panda ï¿½s orï¿½ngutï¿½n helyetcserï¿½l
+	 *
+	 * Az osztalydiagramhoz kepest at kellett neveznunk ezt a metodust, mert javas beepÃ­tettel utkozott.
 	 * 
 	 * @param animal
 	 */
-	public void catch(Animal animal){
+	public void catchAnimal(Animal animal){
 
 	}
 
@@ -30,11 +29,4 @@ public class Orangutan extends Animal implements Animal {
 
 	}
 
-	/**
-	 * 
-	 * @param signal
-	 */
-	public void react(Signal signal){
-
-	}
 }//end Orangutan

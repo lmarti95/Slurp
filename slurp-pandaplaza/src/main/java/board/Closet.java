@@ -1,11 +1,15 @@
 
+package board;
+
+import characters.Animal;
+import game.Steppable;
 
 /**
  * @author User
  * @version 1.0
- * @created 24-márc.-2019 11:30:49
+ * @created 24-mï¿½rc.-2019 11:30:49
  */
-public class Closet extends Tile implements steppableTile {
+public class Closet extends Tile {
 
 	private Closet otherCloset;
 
@@ -13,9 +17,6 @@ public class Closet extends Tile implements steppableTile {
 
 	}
 
-	public void finalize() throws Throwable {
-		super.finalize();
-	}
 	/**
 	 * 
 	 * @param animal

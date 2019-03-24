@@ -1,9 +1,9 @@
-
+package characters;
 
 /**
  * @author User
  * @version 1.0
- * @created 24-márc.-2019 11:30:54
+ * @created 24-mï¿½rc.-2019 11:30:54
  */
 public class LazyPanda {
 

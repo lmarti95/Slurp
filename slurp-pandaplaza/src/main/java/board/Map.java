@@ -1,9 +1,12 @@
 
+package board;
+
+import characters.Panda;
 
 /**
  * @author User
  * @version 1.0
- * @created 24-márc.-2019 11:30:55
+ * @created 24-mï¿½rc.-2019 11:30:55
  */
 public class Map {
 

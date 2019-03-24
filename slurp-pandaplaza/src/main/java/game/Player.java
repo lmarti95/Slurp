@@ -1,9 +1,11 @@
+package game;
 
+import board.Tile;
 
 /**
  * @author User
  * @version 1.0
- * @created 24-márc.-2019 11:31:02
+ * @created 24-mï¿½rc.-2019 11:31:02
  */
 public class Player {
 
@@ -22,9 +24,9 @@ public class Player {
 	}
 
 	/**
-	 * csempén van állat
-	 *       catch(állat)
-	 * nincs állat
+	 * csempï¿½n van ï¿½llat
+	 *       catch(ï¿½llat)
+	 * nincs ï¿½llat
 	 *      move(tile)
 	 * 
 	 * @param tile
