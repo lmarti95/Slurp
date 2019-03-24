@@ -5,10 +5,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.logging.Logger;
 
+import characters.Orangutan;
+import board.Tile;
+
 public class Main {
 
     private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
     private static BufferedReader bufferRead;
+
+    private static Orangutan orangutan = new Orangutan();
 
     public static void main(String[] args) throws IOException {
         bufferRead = new BufferedReader(new InputStreamReader(System.in));
@@ -90,6 +95,7 @@ public class Main {
             break;
         default:
             LOGGER.info("Lepes a csempere");
+            orangutan.move(new Tile());
             break;
         }
     }
