@@ -22,15 +22,65 @@ public class Main {
                 + "\t2 - kilepes");
 
         String order = bufferRead.readLine();
-        switch (order){
+        switch (order) {
         case "1":
+            orangutanMove();
             break;
         case "2":
+            jatekVege();
             break;
         default:
             break;
         }
 
+    }
+
+    private static void orangutanMove() throws IOException {
+        LOGGER.info("Van panda a jatekteren?:\n"
+                + "\t1 -igen\n"
+                + "\t2 - nem");
+        String order = bufferRead.readLine();
+        switch (order) {
+        case "1":
+            csempereLepes();
+            break;
+        case "2":
+            jatekVege();
+            break;
+        default:
+            break;
+        }
+    }
+
+    private static void csempereLepes() throws IOException {
+        LOGGER.info("Melyik csempere? (1-x):");
+        String order = bufferRead.readLine();
+        LOGGER.info("Csempe tartossaga? ((-1)-20:");
+        order = bufferRead.readLine();
+        switch (order) {
+        case "-1":
+            LOGGER.info("A csempe eros");
+            break;
+        case "0":
+        case "1":
+            die();
+            break;
+        default: csempeDolog();
+            break;
+        }
+
+    }
+
+    private static void csempeDolog(){
+
+    }
+
+    private static void die() {
+        LOGGER.info("Az allat halott");
+    }
+
+    private static void jatekVege() {
+        LOGGER.info("Jatek vege!");
     }
 
 }
