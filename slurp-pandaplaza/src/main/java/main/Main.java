@@ -25,6 +25,7 @@ public class Main {
 
     //Szkeleton teszt program létrehozása
     public static void main(String[] args) throws IOException {
+    	Interaction.listen();
         bufferRead = new BufferedReader(new InputStreamReader(System.in));
         mainmenu();
 
