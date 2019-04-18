@@ -9,8 +9,8 @@ import characters.Animal;
  */
 public class Armchair extends Tile {
 
-	public Armchair(){
-
+	public Armchair(String ID){
+		super(ID);
 	}
 
 	/**

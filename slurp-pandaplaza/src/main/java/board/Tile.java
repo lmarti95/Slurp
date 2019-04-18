@@ -16,8 +16,14 @@ public class Tile  {
 	//Törött csempe értéke: 0
 	private int durability;
 
-	public Tile(){
-
+	private String ID;
+	
+	public Tile(String ID){
+		this.ID=ID;
+	}
+	
+	public String getID() {
+		return ID;
 	}
 
 	public void reduceDurability(){

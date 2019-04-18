@@ -117,24 +117,24 @@ public class Main {
         //Orángután elkap egy pandát
         case "1":
         	PandaLazy p =new PandaLazy();
-        	p.setLocation(new Tile());
+        	//p.setLocation(new Tile());
        		orangutan.catchAnimal(p);
             LOGGER.info("A panda elkapasa");
             break;
         //Orángután és követő átmennek a szekrényen egy másik szekrénybe
         case "2":
-        	orangutan.move(new Closet());
+        //	orangutan.move(new Closet());
             LOGGER.info("Belepes a szekrenybe");
             break;
         //Az orángután és követői kilépnek a kijáraton, majd pontok kiírása
         case "3":
-        	orangutan.move(new Exit());
+        //	orangutan.move(new Exit());
         	System.out.println("Pontok osszesen: " + Player.getPoints());
             LOGGER.info("Kilepes a kiajraton");
             break;
         //Orángután rálép egy csempére
         default:
-            orangutan.move(new Tile());
+            //orangutan.move(new Tile());
             LOGGER.info("Lepes a csempere");
             break;
         }

@@ -11,8 +11,8 @@ import characters.Panda;
  */
 public class Exit extends Tile {
 
-	public Exit(){
-
+	public Exit(String ID){
+		super(ID);
 	}
 
 	//Az allatnak meghivodik a steppedOn metodusa ha ralep az exitre

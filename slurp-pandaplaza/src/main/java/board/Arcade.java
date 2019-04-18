@@ -10,8 +10,8 @@ import game.Steppable;
  */
 public class Arcade extends Tile implements Steppable {
 
-	public Arcade(){
-
+	public Arcade(String ID){
+		super(ID);
 	}
 
 	public void step(){

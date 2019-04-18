@@ -14,8 +14,9 @@ public class Closet extends Tile {
 	//másik szekrény
 	private Tile otherCloset;
 
-	public Closet(){
-		otherCloset = new Tile();
+	public Closet(String ID){
+		super(ID);
+		//otherCloset = new Tile();
 	}
 
 	//ha egy állat rálép a székrenyre, akkor átrakjuk a másik szekrényre

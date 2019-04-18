@@ -1,6 +1,8 @@
 
 package board;
 
+import java.util.ArrayList;
+
 import characters.Panda;
 import game.Timer;
 
@@ -14,10 +16,10 @@ public class Map {
 	//bejárat
 	private Tile entry;
 
-	private Tile tileslist;
+	private ArrayList<Tile> tilesList;
 
 	public Map(){
-		entry = new Tile();
+		tilesList = new ArrayList<Tile>();
 	}
 
 	public void finalize() throws Throwable {
@@ -25,11 +27,18 @@ public class Map {
 	}
 	//Pandát helyezünk el a játéktéren
 	public void placePanda(Panda panda){
-		panda.setLocation(new Tile());
+		//panda.setLocation(new Tile());
 		Timer.addSteppable(panda);
 	}
 
 	public Tile getEntry(){
 		return entry;
+	}
+	
+	public ArrayList<Tile> getTilesList() {
+		return tilesList;
+	}
+	public void addTile(Tile t) {
+		tilesList.add(t);
 	}
 }//end Map
