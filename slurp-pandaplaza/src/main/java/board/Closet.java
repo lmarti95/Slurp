@@ -14,8 +14,8 @@ public class Closet extends Tile {
 	//másik szekrény
 	private Tile otherCloset;
 
-	public Closet(String ID){
-		super(ID);
+	public Closet(String ID,int durability){
+		super(ID, durability);
 		//otherCloset = new Tile();
 	}
 

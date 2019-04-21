@@ -11,8 +11,8 @@ import game.Steppable;
  */
 public class VendingMachine extends Tile implements Steppable {
 
-	public VendingMachine(String id){
-		super(id);
+	public VendingMachine(String id, int durability){
+		super(id, durability);
 	}
 
 	public void finalize() throws Throwable {

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-import board.Tile;
+import board.*;
 import game.Game;
 
 //interaction class felhasznalo bevitelek kezelesere
@@ -21,7 +21,7 @@ public class Interaction {
 			String line = br.readLine();
 			for (int i = 0; i < commands.size(); i++) {
 				if (decode(line, commands.get(i))) {
-					work(i);
+					work(i, line);
 					i = commands.size();
 				}
 			}
@@ -62,21 +62,44 @@ public class Interaction {
 		return true;
 	}
 
-	public static void work(int in) {
+	public static void work(int in, String line) {
 		switch (in) {
+		// Start New Game
 		case 0:
 			g = new Game();
 			break;
+		// Add Tile
 		case 5:
-			g.getMap().addTile(new Tile("a0"));
+			String[] words = line.split(" ");
+			switch (words[3]) {
+			case "arcade":
+				g.getMap().addTile(new Arcade(words[2], Integer.parseInt(words[4])));
+				break;
+			case "armchair":
+				g.getMap().addTile(new Armchair(words[2], Integer.parseInt(words[4])));
+				break;
+			case "closet":
+				g.getMap().addTile(new Closet(words[2], Integer.parseInt(words[4])));
+				break;
+			case "vendingMach":
+				g.getMap().addTile(new VendingMachine(words[2], Integer.parseInt(words[4])));
+				break;
+			case "-":
+				g.getMap().addTile(new Tile(words[2], Integer.parseInt(words[4])));
+				break;
+			case "exit":
+				g.getMap().addTile(new Exit(words[2], Integer.parseInt(words[4])));
+				break;
+			}
 			break;
+		// List Tiles
 		case 6:
 			if (g.getMap().getTilesList().size() == 0) {
 				System.out.println("Ures");
 			} else {
 				ArrayList<Tile> list = g.getMap().getTilesList();
 				for (int i = 0; i < list.size(); i++) {
-					System.out.println(list.get(i).getID());
+					System.out.println(list.get(i).getID() + "\t" + list.get(i).getDurability());
 				}
 			}
 			break;
