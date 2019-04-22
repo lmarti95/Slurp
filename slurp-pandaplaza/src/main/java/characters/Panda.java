@@ -12,10 +12,10 @@ import game.Player;
 public abstract class Panda extends Animal implements Steppable {
 
 	private Animal followed;
+	
 
-
-	public Panda(){
-
+	public Panda(String ID){
+		super(ID);
 	}
 
 	//Panda kimegy a kijáraton és kap pontot

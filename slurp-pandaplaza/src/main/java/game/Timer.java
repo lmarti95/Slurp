@@ -1,5 +1,7 @@
 package game;
 
+import java.util.ArrayList;
+
 /**
  * @author User
  * @version 1.0
@@ -7,7 +9,7 @@ package game;
  */
 public class Timer {
 
-	private Steppable steppablesList;
+	private static  ArrayList<Steppable> steppablesList = new ArrayList<Steppable>();
 	private static Timer single_instance=null;
 
 	//Singleton Timer osztály létrehozása
@@ -23,18 +25,15 @@ public class Timer {
 	 * @param steppable
 	 */
 	public static void addSteppable(Steppable steppable){
-
+		steppablesList.add(steppable);
 	}
 
-	/**
-	 * 
-	 * @param steppable
-	 */
 	public static void removeSteppable(Steppable steppable){
-
+		steppablesList.remove(steppable);
 	}
 
 	public void tick(){
 
 	}
+	
 }//end Timer

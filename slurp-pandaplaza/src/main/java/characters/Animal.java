@@ -14,9 +14,10 @@ public abstract class Animal {
 	private Panda follower;
 	private Tile location;
 	private Tile oldLocation;
+	private String ID;
 
-	public Animal(){
-
+	public Animal(String ID){
+		this.ID = ID;
 	}
 
 	public void die(){
@@ -69,5 +70,9 @@ public abstract class Animal {
 	}
 	public Panda getFollower(){
 		return follower;
+	}
+
+	public String getID() {
+		return ID;
 	}
 }//end Animal

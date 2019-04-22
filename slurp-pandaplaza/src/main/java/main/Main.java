@@ -116,9 +116,9 @@ public class Main {
         switch (order) {
         //Orángután elkap egy pandát
         case "1":
-        	PandaLazy p =new PandaLazy();
+        	//PandaLazy p =new PandaLazy();
         	//p.setLocation(new Tile());
-       		orangutan.catchAnimal(p);
+       		//orangutan.catchAnimal(p);
             LOGGER.info("A panda elkapasa");
             break;
         //Orángután és követő átmennek a szekrényen egy másik szekrénybe
@@ -150,7 +150,7 @@ public class Main {
     	player = new Player();
     	Game g = new Game();
     	g.initMap();
-    	orangutan = new Orangutan();
+    	//orangutan = new Orangutan();
     	orangutan.setLocation((g.getMap().getEntry()));
     	g.getMap().getEntry().setAnimal(orangutan);
 

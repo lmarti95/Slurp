@@ -12,8 +12,8 @@ import characters.Panda;
 
 public class Orangutan extends Animal {
 
-	public Orangutan(){
-
+	public Orangutan(String ID){
+		super(ID);
 	}
 
 	

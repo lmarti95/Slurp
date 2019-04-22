@@ -7,8 +7,8 @@ package characters;
  */
 public class PandaTinkle extends Panda {
 
-	public PandaTinkle(){
-
+	public PandaTinkle(String ID){
+		super(ID);
 	}
 
 	public void scaredFromTinkle(){

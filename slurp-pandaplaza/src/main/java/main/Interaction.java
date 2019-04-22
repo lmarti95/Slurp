@@ -6,7 +6,10 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import board.*;
+import characters.*;
 import game.Game;
+import game.Steppable;
+import game.Timer;
 
 //interaction class felhasznalo bevitelek kezelesere
 public class Interaction {
@@ -39,7 +42,7 @@ public class Interaction {
 		commands.add(new String[] { "List", "Players" }); // 7
 		commands.add(new String[] { "Release", "Pandas" }); // 8
 		commands.add(new String[] { "Add", "Player" }); // 9
-		commands.add(new String[] { "Add", "Panda" }); // 10
+		commands.add(new String[] { "Place", "Panda" }); // 10
 		commands.add(new String[] { "Control", "Things" }); // 11
 		commands.add(new String[] { "Connect", "Tiles" }); // 12
 		commands.add(new String[] { "Connect", "Orangutan", "Panda" }); // 13
@@ -63,6 +66,7 @@ public class Interaction {
 	}
 
 	public static void work(int in, String line) {
+		String[] words = line.split(" ");
 		switch (in) {
 		// Start New Game
 		case 0:
@@ -70,7 +74,6 @@ public class Interaction {
 			break;
 		// Add Tile
 		case 5:
-			String[] words = line.split(" ");
 			switch (words[3]) {
 			case "arcade":
 				g.getMap().addTile(new Arcade(words[2], Integer.parseInt(words[4])));
@@ -103,6 +106,53 @@ public class Interaction {
 				}
 			}
 			break;
+		//Place Panda
+		case 10:
+			switch(words[4]) {
+			case "LAZY":
+				PandaLazy p0 = new PandaLazy(words[2]);
+				placePanda(p0, words[3]);
+				break;
+			case "BEEP":
+				PandaBeep p1 = new PandaBeep(words[2]);
+				placePanda(p1, words[3]);
+				break;
+			case "TINKLE":
+				PandaTinkle p2 = new PandaTinkle(words[2]);
+				placePanda(p2, words[3]);
+				break;
+			}
+			
+			break;
+		//List Pandas
+		case 16:
+			ArrayList<Panda> pandas = g.getMap().getPandaList();
+			for(int i=0;i<pandas.size();i++) {
+				Panda p = pandas.get(i);
+				String type = p.getClass().toString().substring(22).toUpperCase();
+				String follower;
+				String following;
+				if(p.getFollowed() == null) {
+					following = "-";
+				} else {
+					following = p.getFollowed().getID();
+				}
+				if(p.getFollower() == null) {
+					follower = "-";
+				} else {
+					follower = p.getFollower().getID();
+				}
+				System.out.println(p.getID() + "\t" + type + "\t" + following + "\t" + follower + "\t" + p.getLocation().getID());
+			}
+			break;
 		}
+	
+	}
+	
+	public static void placePanda(Panda p, String tileID) {
+		g.getMap().getTile(tileID).setAnimal(p);
+		p.setLocation(g.getMap().getTile(tileID));
+		g.getMap().addPanda(p);
+		Timer.addSteppable(p);
 	}
 }

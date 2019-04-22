@@ -1,0 +1,9 @@
+Start New Game
+Add Tile T0 - -1
+Add Tile T1 arcade 20
+Add Tile T2 armchair 20
+Add Tile T3 vendingMach 20
+Add Tile T4 closet -1
+Add Tile T5 closet -1
+Add Tile T6 exit -1
+List Tiles

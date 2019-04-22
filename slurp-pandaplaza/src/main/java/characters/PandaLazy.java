@@ -9,8 +9,8 @@ import characters.Panda;
  */
 public class PandaLazy extends Panda {
 
-	public PandaLazy(){
-
+	public PandaLazy(String ID){
+		super(ID);
 	}
 
 	public void sit(){

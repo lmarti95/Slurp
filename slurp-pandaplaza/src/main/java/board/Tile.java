@@ -44,4 +44,6 @@ public class Tile {
 	public void setAnimal(Animal a) {
 		animal = a;
 	}
+	
+
 }// end Tile

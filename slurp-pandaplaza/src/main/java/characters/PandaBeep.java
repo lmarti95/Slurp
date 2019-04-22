@@ -7,8 +7,8 @@ package characters;
  */
 public class PandaBeep extends Panda {
 
-	public PandaBeep(){
-
+	public PandaBeep(String ID){
+		super(ID);
 	}
 
 	public void scaredFromBeep(){
