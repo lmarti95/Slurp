@@ -38,6 +38,10 @@ public class Map {
 	public Tile getEntry() {
 		return entry;
 	}
+	
+	public void setEntry(Tile t) {
+		entry=t;
+	}
 
 	public ArrayList<Tile> getTilesList() {
 		return tilesList;

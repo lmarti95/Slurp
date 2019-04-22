@@ -6,4 +6,16 @@ Add Tile T3 vendingMach 20
 Add Tile T4 closet -1
 Add Tile T5 closet -1
 Add Tile T6 exit -1
+Connect Tiles T0 T1
+Connect Tiles T1 T2
+Connect Tiles T2 T3
+Connect Tiles T2 T4
+Connect Tiles T3 T4
+Connect Closets T4 T5
+Connect Tiles T5 T6
+Select Entry T0
 List Tiles
+Place Panda P0 T1 LAZY
+Place Panda P1 T2 TINKLE
+Place Panda P2 T3 BEEP
+List Pandas

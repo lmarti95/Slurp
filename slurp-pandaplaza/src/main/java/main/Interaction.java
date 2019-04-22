@@ -102,13 +102,29 @@ public class Interaction {
 			} else {
 				ArrayList<Tile> list = g.getMap().getTilesList();
 				for (int i = 0; i < list.size(); i++) {
-					System.out.println(list.get(i).getID() + "\t" + list.get(i).getDurability());
+					String neighbours;
+					if (list.get(i).getNeighbours().size() == 0) {
+						neighbours = "-";
+					} else {
+						neighbours = list.get(i).getNeighbours().get(0).getID();
+						for (int j = 1; j < list.get(i).getNeighbours().size(); j++) {
+							neighbours = neighbours + "," + list.get(i).getNeighbours().get(j).getID();
+						}
+					}
+					String type = list.get(i).getClass().toString().substring(12).toUpperCase();
+					if(type.equals("TILE")) {
+						type="-";
+					}
+					if(g.getMap().getEntry()==list.get(i)) {
+						type ="ENTRY";
+					}
+					System.out.println(list.get(i).getID() + "\t" + neighbours + "\t" + type + "\t"  + list.get(i).getDurability());
 				}
 			}
 			break;
-		//Place Panda
+		// Place Panda
 		case 10:
-			switch(words[4]) {
+			switch (words[4]) {
 			case "LAZY":
 				PandaLazy p0 = new PandaLazy(words[2]);
 				placePanda(p0, words[3]);
@@ -122,33 +138,52 @@ public class Interaction {
 				placePanda(p2, words[3]);
 				break;
 			}
-			
+
 			break;
-		//List Pandas
+		// Connect Tiles
+		case 12:
+			Tile t1 = g.getMap().getTile(words[2]);
+			Tile t2 = g.getMap().getTile(words[3]);
+			t1.addNeighbour(t2);
+			t2.addNeighbour(t1);
+			break;
+		//Connect Closets
+		case 14:
+			Closet c1 = (Closet) g.getMap().getTile(words[2]);
+			Closet c2 = (Closet) g.getMap().getTile(words[3]);
+			c1.setOtherCloset(c2);
+			c2.setOtherCloset(c1);
+			break;
+		//Select Entry
+		case 15:
+			g.getMap().setEntry(g.getMap().getTile(words[2]));
+			break;
+		// List Pandas
 		case 16:
 			ArrayList<Panda> pandas = g.getMap().getPandaList();
-			for(int i=0;i<pandas.size();i++) {
+			for (int i = 0; i < pandas.size(); i++) {
 				Panda p = pandas.get(i);
 				String type = p.getClass().toString().substring(22).toUpperCase();
 				String follower;
 				String following;
-				if(p.getFollowed() == null) {
+				if (p.getFollowed() == null) {
 					following = "-";
 				} else {
 					following = p.getFollowed().getID();
 				}
-				if(p.getFollower() == null) {
+				if (p.getFollower() == null) {
 					follower = "-";
 				} else {
 					follower = p.getFollower().getID();
 				}
-				System.out.println(p.getID() + "\t" + type + "\t" + following + "\t" + follower + "\t" + p.getLocation().getID());
+				System.out.println(
+						p.getID() + "\t" + type + "\t" + following + "\t" + follower + "\t" + p.getLocation().getID());
 			}
 			break;
 		}
-	
+
 	}
-	
+
 	public static void placePanda(Panda p, String tileID) {
 		g.getMap().getTile(tileID).setAnimal(p);
 		p.setLocation(g.getMap().getTile(tileID));

@@ -1,12 +1,9 @@
 package board;
 
+import java.util.ArrayList;
+
 import characters.Animal;
 
-/**
- * @author User
- * @version 1.0
- * @created 24-m�rc.-2019 11:31:08
- */
 public class Tile {
 
 	private Animal animal;
@@ -16,10 +13,13 @@ public class Tile {
 	private int durability;
 
 	private String ID;
-
+	private ArrayList<Tile> neighbours;
+	
+	
 	public Tile(String ID, int durability) {
 		this.ID = ID;
 		this.durability = durability;
+		neighbours = new  ArrayList<Tile>();
 	}
 
 	public String getID() {
@@ -28,6 +28,23 @@ public class Tile {
 
 	public void reduceDurability() {
 
+	}
+	
+	public void addNeighbour(Tile t) {
+		neighbours.add(t);
+	}
+	
+	public Tile getNeighbour(String TileID) {
+		for(int i=0;i<neighbours.size();i++) {
+			if(neighbours.get(i).getID().equals(TileID)) {
+				return neighbours.get(i);
+			}
+		}
+		return null;
+	}
+	
+	public ArrayList<Tile> getNeighbours(){
+		return neighbours;
 	}
 	
 	public int getDurability() {
