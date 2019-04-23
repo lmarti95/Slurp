@@ -197,6 +197,12 @@ public class Interaction {
 		Timer.addSteppable(p);
 	}
 
+	public static void initGame(){
+		if(g==null){
+			g = new Game();
+		}
+	}
+
 
 
 }
