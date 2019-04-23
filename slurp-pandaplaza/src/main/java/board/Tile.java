@@ -6,7 +6,7 @@ import characters.Animal;
 
 public class Tile {
 
-	private Animal animal;
+	protected Animal animal;
 	// Erős csempe értéke: -1
 	// Gyenge csempe kezdeti értéke: 20
 	// Törött csempe értéke: 0
@@ -27,7 +27,12 @@ public class Tile {
 	}
 
 	public void reduceDurability() {
-
+		durability--;
+	}
+	
+	//implementalva van az orokolt osztalyokban
+	public void control() {
+		
 	}
 	
 	public void addNeighbour(Tile t) {

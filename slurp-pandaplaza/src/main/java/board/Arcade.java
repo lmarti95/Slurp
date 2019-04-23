@@ -1,6 +1,7 @@
 package board;
 
 import characters.Animal;
+import characters.Panda;
 import game.Steppable;
 
 /**
@@ -16,6 +17,14 @@ public class Arcade extends Tile implements Steppable {
 
 	public void step(){
 
+	}
+	
+	public void control(){
+		Panda pandaBehind =(Panda) animal;
+		while(pandaBehind != null) {
+			pandaBehind.setFollowed(null);
+			pandaBehind = pandaBehind.getFollower();
+		}
 	}
 
 	/**

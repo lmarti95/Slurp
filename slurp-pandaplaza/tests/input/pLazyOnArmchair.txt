@@ -1,0 +1,22 @@
+Add tile: T0 - -1
+Add tile: T1 - 20
+Add tile: T2 - 20
+Add tile: T3 armchair -1
+Add tile: T4 - -1
+Add tile: T5 - -1
+Connect tiles: T0 T1
+Connect tiles: T1 T2
+Connect tiles: T2 T3
+Connect tiles: T3 T4
+Connect tiles: T4 T5
+Select entry: T0
+Place panda: P1 T1 BEEP
+Place panda: P2 T2 LAZY
+Place panda: P3 T3 BEEP
+Add player: Pl1
+Connect orangutan panda: O1 P1
+Connect orangutan panda: O1 P2
+Connect orangutan panda: O1 P3
+Move orangutan: O1 T4
+Move orangutan: O1 T5
+List pandas
