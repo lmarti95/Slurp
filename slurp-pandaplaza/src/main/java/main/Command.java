@@ -18,7 +18,7 @@ public enum Command {
     PLACE_PANDA("Place panda"),
     LIST_PANDAS("List pandas"),
     CONTROL_THINGS("Control things"),
-    CONNECT_ORANGUTAN_PANDA("Connect oragutan panda"),
+    CONNECT_ORANGUTAN_PANDA("Connect orangutan panda"),
 
     ;
 

@@ -39,5 +39,28 @@ public class PlazaTest {
         File assertOut = new File("tests/output/oBrokenTileOutput.txt");
         Assert.assertTrue(FileUtils.contentEquals(result, assertOut));
     }
+    @Test
+    public void testOCatchesPInput() throws IOException {
+        Interaction.listen(new FileReader("tests/input/oCatchesPInput.txt"), true);
+        File result = new File("testResult.txt");
+        File assertOut = new File("tests/output/oCatchesPOutput.txt");
+        Assert.assertTrue(FileUtils.contentEquals(result, assertOut));
+    }
+
+    @Test
+    public void testODiesWithPandas() throws IOException {
+        Interaction.listen(new FileReader("tests/input/oDiesWithPandas.txt"), true);
+        File result = new File("testResult.txt");
+        File assertOut = new File("tests/output/oDiesWithPandasOutput.txt");
+        Assert.assertTrue(FileUtils.contentEquals(result, assertOut));
+    }
+
+    @Test
+    public void testoPandaExitInput() throws IOException {
+        Interaction.listen(new FileReader("tests/input/oPandaExitInput.txt"), true);
+        File result = new File("testResult.txt");
+        File assertOut = new File("tests/output/oPandaExitOutput.txt");
+        Assert.assertTrue(FileUtils.contentEquals(result, assertOut));
+    }
 
 }

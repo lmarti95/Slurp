@@ -1,4 +1,4 @@
-Add tile: T0 -  -1
+Add tile: T0 - -1
 Add tile: T1 - 20
 Add tile: T2 - 20
 Add tile: T3 exit -1

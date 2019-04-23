@@ -147,7 +147,7 @@ public class Main {
     //Új játékos, játék és orángután
     public static void init(){
     	//player = new Player();
-    	Game g = new Game();
+    	Game g = Game.getInstance();
     	g.initMap();
     	//orangutan = new Orangutan();
     	orangutan.setLocation((g.getMap().getEntry()));
