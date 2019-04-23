@@ -18,85 +18,57 @@ public class Interaction {
 	private static Game g;
 
 	public static void listen() throws IOException {
-		addCommands();
+		//addCommands();
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		while (true) {
 			String line = br.readLine();
-			for (int i = 0; i < commands.size(); i++) {
-				if (decode(line, commands.get(i))) {
-					work(i, line);
-					i = commands.size();
-				}
+			String[] lineArray=line.split(":");
+			String command = lineArray[0];
+			String params = lineArray[1];
+			try {
+				Command cmd = Command.valueOf(command);
+				work(cmd, params);
+
+			} catch (IllegalArgumentException e){
+				System.out.println("No such command found, please try another!");
 			}
+
 		}
 	}
 
-	private static void addCommands() {
-		commands.add(new String[] { "Start", "New", "Game" }); // 0
-		commands.add(new String[] { "Load", "Game", "State" }); // 1
-		commands.add(new String[] { "Save", "Game", "State" }); // 2
-		commands.add(new String[] { "Move", "Orangutan" }); // 3
-		commands.add(new String[] { "Move", "Panda" }); // 4
-		commands.add(new String[] { "Add", "Tile" }); // 5
-		commands.add(new String[] { "List", "Tiles" }); // 6
-		commands.add(new String[] { "List", "Players" }); // 7
-		commands.add(new String[] { "Release", "Pandas" }); // 8
-		commands.add(new String[] { "Add", "Player" }); // 9
-		commands.add(new String[] { "Place", "Panda" }); // 10
-		commands.add(new String[] { "Control", "Things" }); // 11
-		commands.add(new String[] { "Connect", "Tiles" }); // 12
-		commands.add(new String[] { "Connect", "Orangutan", "Panda" }); // 13
-		commands.add(new String[] { "Connect", "Closets" }); // 14
-		commands.add(new String[] { "Select", "Entry" }); // 15
-		commands.add(new String[] { "List", "Pandas" }); // 16
-	}
 
-	public static boolean decode(String str, String[] command) {
-		String[] words = str.split(" ");
-		if (words.length >= command.length) {
-			for (int i = 0; i < command.length; i++) {
-				if (!words[i].equals(command[i])) {
-					return false;
-				}
-			}
-		} else {
-			return false;
-		}
-		return true;
-	}
-
-	public static void work(int in, String line) {
+	public static void work(Command cmd, String line) {
 		String[] words = line.split(" ");
-		switch (in) {
+		switch (cmd) {
 		// Start New Game
-		case 0:
+		case NEW_GAME:
 			g = new Game();
 			break;
 		// Add Tile
-		case 5:
-			switch (words[3]) {
+		case ADD_TILE:
+			switch (words[1]) {
 			case "arcade":
-				g.getMap().addTile(new Arcade(words[2], Integer.parseInt(words[4])));
+				g.getMap().addTile(new Arcade(words[0], Integer.parseInt(words[2])));
 				break;
 			case "armchair":
-				g.getMap().addTile(new Armchair(words[2], Integer.parseInt(words[4])));
+				g.getMap().addTile(new Armchair(words[0], Integer.parseInt(words[2])));
 				break;
 			case "closet":
-				g.getMap().addTile(new Closet(words[2], Integer.parseInt(words[4])));
+				g.getMap().addTile(new Closet(words[0], Integer.parseInt(words[2])));
 				break;
 			case "vendingMach":
-				g.getMap().addTile(new VendingMachine(words[2], Integer.parseInt(words[4])));
+				g.getMap().addTile(new VendingMachine(words[0], Integer.parseInt(words[2])));
 				break;
 			case "-":
-				g.getMap().addTile(new Tile(words[2], Integer.parseInt(words[4])));
+				g.getMap().addTile(new Tile(words[0], Integer.parseInt(words[2])));
 				break;
 			case "exit":
-				g.getMap().addTile(new Exit(words[2], Integer.parseInt(words[4])));
+				g.getMap().addTile(new Exit(words[0], Integer.parseInt(words[2])));
 				break;
 			}
 			break;
 		// List Tiles
-		case 6:
+		case LIST_TILES:
 			if (g.getMap().getTilesList().size() == 0) {
 				System.out.println("Ures");
 			} else {
@@ -111,7 +83,7 @@ public class Interaction {
 							neighbours = neighbours + "," + list.get(i).getNeighbours().get(j).getID();
 						}
 					}
-					String type = list.get(i).getClass().toString().substring(12).toUpperCase();
+					String type = list.get(i).getClass().getSimpleName().toUpperCase();//.toString().substring(12).toUpperCase();
 					if(type.equals("TILE")) {
 						type="-";
 					}
@@ -123,43 +95,43 @@ public class Interaction {
 			}
 			break;
 		// Place Panda
-		case 10:
-			switch (words[4]) {
+		case PLACE_PANDA:
+			switch (words[2]) {
 			case "LAZY":
-				PandaLazy p0 = new PandaLazy(words[2]);
-				placePanda(p0, words[3]);
+				PandaLazy p0 = new PandaLazy(words[0]);
+				placePanda(p0, words[1]);
 				break;
 			case "BEEP":
-				PandaBeep p1 = new PandaBeep(words[2]);
-				placePanda(p1, words[3]);
+				PandaBeep p1 = new PandaBeep(words[0]);
+				placePanda(p1, words[1]);
 				break;
 			case "TINKLE":
-				PandaTinkle p2 = new PandaTinkle(words[2]);
-				placePanda(p2, words[3]);
+				PandaTinkle p2 = new PandaTinkle(words[0]);
+				placePanda(p2, words[1]);
 				break;
 			}
 
 			break;
 		// Connect Tiles
-		case 12:
-			Tile t1 = g.getMap().getTile(words[2]);
-			Tile t2 = g.getMap().getTile(words[3]);
+		case CONNECT_TILES:
+			Tile t1 = g.getMap().getTile(words[0]);
+			Tile t2 = g.getMap().getTile(words[1]);
 			t1.addNeighbour(t2);
 			t2.addNeighbour(t1);
 			break;
 		//Connect Closets
-		case 14:
-			Closet c1 = (Closet) g.getMap().getTile(words[2]);
-			Closet c2 = (Closet) g.getMap().getTile(words[3]);
+		case CONNECT_CLOSETS:
+			Closet c1 = (Closet) g.getMap().getTile(words[0]);
+			Closet c2 = (Closet) g.getMap().getTile(words[1]);
 			c1.setOtherCloset(c2);
 			c2.setOtherCloset(c1);
 			break;
 		//Select Entry
-		case 15:
-			g.getMap().setEntry(g.getMap().getTile(words[2]));
+		case SELECT_ENTRY:
+			g.getMap().setEntry(g.getMap().getTile(words[0]));
 			break;
 		// List Pandas
-		case 16:
+		case LIST_PANDAS:
 			ArrayList<Panda> pandas = g.getMap().getPandaList();
 			for (int i = 0; i < pandas.size(); i++) {
 				Panda p = pandas.get(i);
