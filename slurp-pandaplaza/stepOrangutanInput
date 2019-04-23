@@ -1,0 +1,7 @@
+Add Tile T0 - -1
+Add Tile T1 - 20
+Connect Tiles T0 T1
+Select Entry T0
+Add Player Pl1
+Move Orangutan  T1
+List Tiles
