@@ -60,3 +60,10 @@ public class Orangutan extends Animal {
 		}
 		pl.reduceLife();
 	}
+	
+	public void catchedOrangutan(Orangutan og) {
+		setFollower(og.getFollower());
+		og.getFollower().setFollowed(this);
+		og.setFollower(null);
+	}
+}

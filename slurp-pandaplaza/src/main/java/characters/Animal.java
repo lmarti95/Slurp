@@ -50,6 +50,12 @@ public abstract class Animal {
 				behind2.setFollower(null);
 		}
 	}
+	
+	public void catchAnimal(Panda panda){
+	}
+	public void catchedOrangutan(Orangutan og) {
+	
+	}
 
 	public void exit(){
 		follower = null;

@@ -6,6 +6,8 @@ import board.Map;
  * A játékot reprezentáló osztály. Ez végzi a játék elindítását és végének vizsgálatát.
  */
 public class Game {
+	
+	private static Game single_instance=null;
 
 	/**
 	 * Minden játék egy játékteren játszódik, ezt nyilván kell tartani
@@ -17,6 +19,7 @@ public class Game {
 	 */
 	public Game(){
 		map = new Map();
+		single_instance=this;
 	}
 
 	/**
@@ -46,5 +49,10 @@ public class Game {
 	 */
 	public static Map getMap(){
 		return map;
+	}
+
+	public static Game getInstance() {
+		
+		return single_instance;
 	}
 }
