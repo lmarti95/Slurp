@@ -23,7 +23,7 @@ public class Interaction {
 			String command = lineArray[0];
 			String params = "";
 			if(lineArray.length>1) {
-				params = lineArray[1];
+				params = lineArray[1].trim();
 			}
 
 				Command cmd = Command.getCommandByValue(command);
@@ -42,7 +42,7 @@ public class Interaction {
 		switch (cmd) {
 		// Start New Game
 		case NEW_GAME:
-			g = new Game();
+			initGame();
 			break;
 		// Add Tile
 		case ADD_TILE:
@@ -96,7 +96,7 @@ public class Interaction {
 			break;
 		//Add Player
 		case ADD_PLAYER:
-			g.getMap().addPlayer(new Player(words[2]));
+			g.getMap().addPlayer(new Player(words[0]));
 			break;
 		// Place Panda
 		case PLACE_PANDA:
@@ -142,7 +142,7 @@ public class Interaction {
 			}
 			for (int i = 0; i < pandas.size(); i++) {
 				Panda p = pandas.get(i);
-				String type = p.getClass().toString().substring(22).toUpperCase();
+				String type = p.getClass().getSimpleName().toUpperCase();//.toString().substring(22).toUpperCase();
 				String follower;
 				String following;
 				if (p.getFollowed() == null) {
@@ -185,6 +185,26 @@ public class Interaction {
 		case CONTROL_THINGS:
 			g.getMap().getTile(words[0]).control();
 			break;
+		case CONNECT_ORANGUTAN_PANDA:
+			ArrayList<Player> players2 = g.getMap().getPlayers();
+			Orangutan og = null;
+			for(int i=0;i<players2.size();i++) {
+				if(words[0].charAt(1) == players2.get(i).getID().charAt(2)) {
+					 og = players2.get(i).getOrangutan();
+				}
+			}
+			Panda p = g.getMap().getPanda(words[1]);
+			Panda p_behind = og.getFollower();
+			if(p_behind == null) {
+				og.setFollower(p);
+				p.setFollowed(og);
+				return;
+			}
+			p.setFollower(p_behind);
+			p.setFollowed(og);
+			p_behind.setFollowed(p);
+			og.setFollower(p);
+			break;
 		}
 		
 			
@@ -195,6 +215,12 @@ public class Interaction {
 		p.setLocation(g.getMap().getTile(tileID));
 		g.getMap().addPanda(p);
 		Timer.addSteppable(p);
+	}
+
+	public static void initGame(){
+		if(g==null){
+			g = Game.getInstance();
+		}
 	}
 
 
