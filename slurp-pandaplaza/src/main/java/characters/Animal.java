@@ -34,7 +34,10 @@ public abstract class Animal {
 	public void leavePrevLocation(Tile t){
 		oldLocation = location;
 		location = t;
-		oldLocation.setAnimal(null);
+		if(oldLocation !=null) {
+			oldLocation.setAnimal(null);
+		}
+		
 	}
 
 	//Allat es a kovetoi masik csempere mennek at

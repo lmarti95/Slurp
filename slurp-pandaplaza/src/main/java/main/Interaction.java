@@ -185,6 +185,26 @@ public class Interaction {
 		case CONTROL_THINGS:
 			g.getMap().getTile(words[0]).control();
 			break;
+		case CONNECT_ORANGUTAN_PANDA:
+			ArrayList<Player> players2 = g.getMap().getPlayers();
+			Orangutan og = null;
+			for(int i=0;i<players2.size();i++) {
+				if(words[0].charAt(1) == players2.get(i).getID().charAt(2)) {
+					 og = players2.get(i).getOrangutan();
+				}
+			}
+			Panda p = g.getMap().getPanda(words[1]);
+			Panda p_behind = og.getFollower();
+			if(p_behind == null) {
+				og.setFollower(p);
+				p.setFollowed(og);
+				return;
+			}
+			p.setFollower(p_behind);
+			p.setFollowed(og);
+			p_behind.setFollowed(p);
+			og.setFollower(p);
+			break;
 		}
 		
 			
