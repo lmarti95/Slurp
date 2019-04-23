@@ -42,7 +42,16 @@ public class Player {
 		Game.getMap().getEntry().setAnimal(og);
 	}
 	
+	public Orangutan getOrangutan() {
+		return og;
+	}
+	
 	public int getLife(){
 		return life;
+	}
+
+
+	public String getID() {
+		return ID;
 	}
 }//end Player
