@@ -11,10 +11,19 @@ public class Game {
 
 	private static Map map;
 
+	private static Game instanec;
+
 
 	//új játék indítása
-	public Game(){
+	private Game(){
 		map = new Map();
+	}
+
+	public static Game getInstance(){
+		if(instanec==null){
+			instanec = new Game();
+		}
+		return instanec;
 	}
 
 	public void endGame(){

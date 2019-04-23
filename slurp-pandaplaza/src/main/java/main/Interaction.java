@@ -42,7 +42,7 @@ public class Interaction {
 		switch (cmd) {
 		// Start New Game
 		case NEW_GAME:
-			g = new Game();
+			initGame();
 			break;
 		// Add Tile
 		case ADD_TILE:
@@ -219,7 +219,7 @@ public class Interaction {
 
 	public static void initGame(){
 		if(g==null){
-			g = new Game();
+			g = Game.getInstance();
 		}
 	}
 
