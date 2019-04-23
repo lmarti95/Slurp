@@ -1,6 +1,7 @@
 Add tile: T0 - -1
 Add tile: T1 exit -1
 Connect tiles: T0 T1
+Select entry: T0
 Add player: Pl1
 Move orangutan: O1 T1
 List players

@@ -45,7 +45,9 @@ public abstract class Animal {
 		
 		t.steppedOn(this);
 		if(follower != null){
-			follower.move(oldLocation);
+			if(oldLocation!=null) {
+				follower.move(oldLocation);
+			}
 		}
 	}
 

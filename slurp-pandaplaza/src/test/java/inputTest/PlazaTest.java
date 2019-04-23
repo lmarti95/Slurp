@@ -2,10 +2,7 @@ package inputTest;
 
 import main.Interaction;
 import org.apache.commons.io.FileUtils;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 
 import java.io.*;
 
@@ -56,10 +53,43 @@ public class PlazaTest {
     }
 
     @Test
-    public void testoPandaExitInput() throws IOException {
+    public void testOPandaExitInput() throws IOException {
         Interaction.listen(new FileReader("tests/input/oPandaExitInput.txt"), true);
         File result = new File("testResult.txt");
         File assertOut = new File("tests/output/oPandaExitOutput.txt");
+        Assert.assertTrue(FileUtils.contentEquals(result, assertOut));
+    }
+
+    @Test
+    @Ignore
+    public void testOStealsPandas() throws IOException {
+        Interaction.listen(new FileReader("tests/input/oStealsPandas.txt"), true);
+        File result = new File("testResult.txt");
+        File assertOut = new File("tests/output/oStealsPandasOutput.txt");
+        Assert.assertTrue(FileUtils.contentEquals(result, assertOut));
+    }
+
+    @Test
+    public void testOStepsOnCloset() throws IOException {
+        Interaction.listen(new FileReader("tests/input/oStepsOnCloset.txt"), true);
+        File result = new File("testResult.txt");
+        File assertOut = new File("tests/output/oStepsOnClosetOutput.txt");
+        Assert.assertTrue(FileUtils.contentEquals(result, assertOut));
+    }
+
+    @Test
+    public void testOStepsOnClosetWPandas() throws IOException {
+        Interaction.listen(new FileReader("tests/input/oStepsOnClosetWPandas.txt"), true);
+        File result = new File("testResult.txt");
+        File assertOut = new File("tests/output/oStepsOnClosetWPandasOutput.txt");
+        Assert.assertTrue(FileUtils.contentEquals(result, assertOut));
+    }
+
+    @Test
+    public void testOStepsOnExit() throws IOException {
+        Interaction.listen(new FileReader("tests/input/oStepsOnExit.txt"), true);
+        File result = new File("testResult.txt");
+        File assertOut = new File("tests/output/oStepsOnExitOutput.txt");
         Assert.assertTrue(FileUtils.contentEquals(result, assertOut));
     }
 
