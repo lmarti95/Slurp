@@ -55,6 +55,19 @@ public class Map {
 		}
 		return null;
 	}
+	
+	public Panda getPanda(String pandaID) {
+		for (int i = 0; i < pandaList.size(); i++) {
+			if (pandaList.get(i).getID().equals(pandaID)) {
+				return pandaList.get(i);
+			}
+		}
+		return null;
+	}
+	
+	public  ArrayList<Player> getPlayers(){
+		return playerList;
+	}
 
 	public static void addPanda(Panda p){
 		pandaList.add(p);

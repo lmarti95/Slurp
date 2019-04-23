@@ -93,7 +93,7 @@ public class Interaction {
 			}
 			break;
 		//Add Player
-		case 9:
+		case ADD_PLAYER:
 			g.getMap().addPlayer(new Player(words[2]));
 			break;
 		// Place Panda
@@ -154,8 +154,18 @@ public class Interaction {
 						p.getID() + "\t" + type + "\t" + following + "\t" + follower + "\t" + p.getLocation().getID());
 			}
 			break;
+		case MOVE_ORANGUTAN:
+			ArrayList<Player> players = g.getMap().getPlayers();
+			for(int i=0;i<players.size();i++) {
+				if(words[0].charAt(1) == players.get(i).getID().charAt(2)) {
+					 players.get(i).getOrangutan().move(g.getMap().getTile(words[1]));
+				}
+			}
+			break;
+		case MOVE_PANDA:
+			g.getMap().getPanda(words[0]).move(g.getMap().getTile(words[1]));
+			break;
 		}
-
 	}
 
 	public static void placePanda(Panda p, String tileID) {
