@@ -1,0 +1,31 @@
+Start New Game
+Add Tile T0 - -1
+Add Tile T1 arcade -1
+Add Tile T2 closet -1
+Add Tile T3 closet -1
+Add Tile T4 armchair -1
+Add Tile T5 vendingmachine -1
+Add Tile T6 - 20
+Add Tile T7 - 20
+Add Tile T8 exit -1
+Connect Tiles T0 T1
+Connect Tiles T0 T2
+Connect Tiles T0 T3
+Connect Tiles T0 T6
+Connect Tiles T0 T7
+Connect Tiles T1 T2
+Connect Tiles T1 T6
+Connect Tiles T3 T5
+Connect Tiles T3 T6
+Connect Tiles T3 T7
+Connect Tiles T4 T6
+Connect Tiles T4 T8
+Connect Closets T2 T3
+Select Entry T0
+Place Panda P1 T6 LAZY
+Add Player P1
+Move O11 T1
+Add Player P2
+List Tiles
+List Pandas
+List Player
