@@ -23,7 +23,7 @@ public class Interaction {
 			String command = lineArray[0];
 			String params = "";
 			if(lineArray.length>1) {
-				params = lineArray[1];
+				params = lineArray[1].trim();
 			}
 
 				Command cmd = Command.getCommandByValue(command);
@@ -96,7 +96,7 @@ public class Interaction {
 			break;
 		//Add Player
 		case ADD_PLAYER:
-			g.getMap().addPlayer(new Player(words[2]));
+			g.getMap().addPlayer(new Player(words[0]));
 			break;
 		// Place Panda
 		case PLACE_PANDA:
@@ -142,7 +142,7 @@ public class Interaction {
 			}
 			for (int i = 0; i < pandas.size(); i++) {
 				Panda p = pandas.get(i);
-				String type = p.getClass().toString().substring(22).toUpperCase();
+				String type = p.getClass().getSimpleName().toUpperCase();//.toString().substring(22).toUpperCase();
 				String follower;
 				String following;
 				if (p.getFollowed() == null) {
