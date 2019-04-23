@@ -3,17 +3,22 @@ package characters;
 import characters.Panda;
 
 /**
- * @author User
- * @version 1.0
- * @created 24-m�rc.-2019 11:31:00
+ * Olyan panda, aki a fotelre reagál
  */
 public class PandaLazy extends Panda {
 
+	/**
+	 * Konstruktor. Meghívja az ősosztály konstruktorát.
+	 * @param ID a panda egyedi azonosítója
+	 */
 	public PandaLazy(String ID){
 		super(ID);
 	}
 
+	/**
+	 * A panta fotelbe ülésének implementációja
+	 */
 	public void sit(){
 
 	}
-}//end PandaLazy
+}

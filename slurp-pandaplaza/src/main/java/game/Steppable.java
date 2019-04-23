@@ -1,12 +1,12 @@
 package game;
 
 /**
- * @author User
- * @version 1.0
- * @created 24-m�rc.-2019 11:31:05
+ * Interface a körökre osztott működés egységes lekezeléséhez
  */
 public interface Steppable {
 
+	/**
+	 * Körök kezelésének módját megadó függvény.
+	 */
 	public void step();
-
 }

@@ -1,17 +1,22 @@
 package characters;
 
 /**
- * @author User
- * @version 1.0
- * @created 24-m�rc.-2019 11:31:01
+ * Olyan pandát reprezentáló osztály, aki a csokiautómatára reagál reagál.
  */
 public class PandaTinkle extends Panda {
 
+	/**
+	 * Konstruktor. Meghívja az ősosztály konstruktorát.
+	 * @param ID a panda egyedi azonosítója
+	 */
 	public PandaTinkle(String ID){
 		super(ID);
 	}
 
+	/**
+	 * A csokiautómata csipogására való reakció implementáció
+	 */
 	public void scaredFromTinkle(){
 
 	}
-}//end PandaTinkle
+}

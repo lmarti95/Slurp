@@ -5,32 +5,56 @@ import board.Map;
 import game.Game;
 
 /**
- * @author User
- * @version 1.0
- * @created 24-m�rc.-2019 11:30:33
+ * Animal absztrakt ősosztály. Felelőssége az állatok közös tulajdonságainak összefogása
  */
 public abstract class Animal {
 
+	/**
+	 * Minden állatot követ egy panda.
+	 */
 	private Panda follower;
+
+	/**
+	 * Minden állat tudja hogy melyik csempén áll az aktuális körben
+	 */
 	private Tile location;
+
+	/**
+	 * Minden állat tudja, hogy melyik csempén állt az előző körben
+	 */
 	private Tile oldLocation;
+
+	/**
+	 * Minden állatot egy String azonosító egyértelműen azonosít
+	 */
 	private String ID;
 
+
+	/**
+	 * Az Animal osztály konstruktora. Minden állatnak 'születéskor' meg kell adni az egyedi azonosítóját.
+	 * @param ID az állat egyedi azonosítója
+	 */
 	public Animal(String ID){
 		this.ID = ID;
 	}
 
-	public void die(){
+	/**
+	 * Minden állat meg tud halni, pl. ha leesik agy törött csempén.
+	 */
+	public void die(){ }
 
-	}
-
-	//Az orángután kilép, a Panda exit metódusa felül van definiálva
+	/**
+	 * A metódus hívására az absztrakt Animal elhagyja a játékteret. Az állat a kilépés utána bejáratra kerül.
+	 */
 	public void exit(){
 		follower = null;
 		Game.getMap().getEntry().steppedOn(this);
 	}
 
-	//Elhagyja az állat a csempét
+	/**
+	 * Elhagyja az állat a csempét
+	 * @param t a csempe amit elhagy az állat (előző csempe)
+	 */
 	public void leavePrevLocation(Tile t){
 		oldLocation = location;
 		location = t;
@@ -40,42 +64,69 @@ public abstract class Animal {
 		
 	}
 
-	//Allat es a kovetoi masik csempere mennek at
+	/**
+	 * Az állat és követői a kijelölt csempére lépnek át
+	 * @param t a kijelölt csempe
+	 */
 	public void move(Tile t){
-		
 		t.steppedOn(this);
 		if(follower != null){
 			follower.move(oldLocation);
 		}
 	}
 
-	public void scaredFromBeep(){
+	/**
+	 * Az állat reagál a játékgép csilingelésére. A működést a gyermek osztályok implementálják.
+	 */
+	public void scaredFromBeep(){ }
 
-	}
+	/**
+	 * Az állat reagál a csokiautómata sípolására. A működést a gyermek osztályok implementálják.
+	 */
+	public void scaredFromTinkle(){	}
 
-	public void scaredFromTinkle(){
+	/**
+	 * Az állat reagál a fotel hívogató szavára. A működést a gyermek osztályok implementálják.
+	 */
+	public void sit(){ }
 
-	}
-
-	public void sit(){
-
-	}
+	/**
+	 * Függvény, ami az állat helyét állítja be a megadott csempére.
+	 * @param t a csempe ahol az állatnak lennie kell.
+	 */
 	public void setLocation(Tile t){
 		location = t;
 	}
 
+	/**
+	 * Segédfüggvény az állat helyének lekérdezésére.
+	 * @return az állatot tartalmazó csempe
+	 */
 	public Tile getLocation(){
 		return location;
 	}
 
+	/**
+	 * Segédfüggvény a követő panda beállítására
+	 * @param p a követő panda
+	 */
 	public void setFollower(Panda p){
 		follower=p;
 	}
+
+	/**
+	 * Segédfüggvény a követő panda lekérdezéséhez
+	 * @return
+	 */
 	public Panda getFollower(){
 		return follower;
 	}
 
+	/**
+	 * Segédfüggvény az egyedi azonosító lekérdezéséhez
+	 * @return egyedi azonosító
+	 */
 	public String getID() {
 		return ID;
 	}
-}//end Animal
+}

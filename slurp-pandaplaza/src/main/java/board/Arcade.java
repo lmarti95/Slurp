@@ -5,20 +5,29 @@ import characters.Panda;
 import game.Steppable;
 
 /**
- * @author User
- * @version 1.0
- * @created 24-m�rc.-2019 11:30:47
+ * Játékautómatát tartalmazó csempe osztály implementációja
  */
 public class Arcade extends Tile implements Steppable {
 
+	/**
+	 * Konstruktor. Meghívja az ős konstruktorát.
+	 * @param ID a csempe azonosítója
+	 * @param durability a csempe erőssége vagy élettartama
+	 */
 	public Arcade(String ID, int durability){
 		super(ID, durability);
 	}
 
+	/**
+	 * A körök múlását kezelő függvény
+	 */
 	public void step(){
 
 	}
-	
+
+	/**
+	 * A panda és az autómata interakcióját modellező függvény. Elengedi a követő pandákat.
+	 */
 	public void control(){
 		Panda pandaBehind =(Panda) animal;
 		while(pandaBehind != null) {
@@ -28,10 +37,10 @@ public class Arcade extends Tile implements Steppable {
 	}
 
 	/**
-	 * 
-	 * @param animal
+	 * A csempére lépés modellezése
+	 * @param animal az csempére lépő állat
 	 */
 	public void steppedOn(Animal animal){
 
 	}
-}//end Arcade
+}

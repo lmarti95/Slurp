@@ -3,42 +3,48 @@ package game;
 import board.Map;
 
 /**
- * @author User
- * @version 1.0
- * @created 24-m�rc.-2019 11:30:52
+ * A játékot reprezentáló osztály. Ez végzi a játék elindítását és végének vizsgálatát.
  */
 public class Game {
 
+	/**
+	 * Minden játék egy játékteren játszódik, ezt nyilván kell tartani
+	 */
 	private static Map map;
 
-	private static Game instanec;
-
-
-	//új játék indítása
-	private Game(){
+	/**
+	 * Konstruktor. Létrehoz egy játékteret
+	 */
+	public Game(){
 		map = new Map();
 	}
 
-	public static Game getInstance(){
-		if(instanec==null){
-			instanec = new Game();
-		}
-		return instanec;
-	}
-
+	/**
+	 * A játék végét viszgáló segédfüggvény
+	 */
 	public void endGame(){
 
 	}
 
+	/**
+	 * Játéktér létrehozása
+	 */
 	public void initMap(){
 
 	}
 
+	/**
+	 * Új játék indítása
+	 */
 	public void newGame(){
 
 	}
 
+	/**
+	 * A játéktér lekérdezését segítő függvény
+	 * @return a játéktér
+	 */
 	public static Map getMap(){
 		return map;
 	}
-}//end Game
+}

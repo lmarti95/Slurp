@@ -1,17 +1,22 @@
 package characters;
 
 /**
- * @author User
- * @version 1.0
- * @created 24-m�rc.-2019 11:30:59
+ * Olyan pandát reprezentáló osztály, aki a játékgép csilingelésére reagál.
  */
 public class PandaBeep extends Panda {
 
+	/**
+	 * Konstruktor. Meghívja az ősosztály konstruktorát.
+	 * @param ID a panda egyedi azonosítója
+	 */
 	public PandaBeep(String ID){
 		super(ID);
 	}
 
+	/**
+	 * A játékgép csilingelésére való reakció implementáció
+	 */
 	public void scaredFromBeep(){
 
 	}
-}//end PandaBeep
+}
