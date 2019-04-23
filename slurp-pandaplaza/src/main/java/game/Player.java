@@ -1,20 +1,20 @@
 package game;
 
 import board.Tile;
+import characters.Orangutan;
 
-/**
- * @author User
- * @version 1.0
- * @created 24-m�rc.-2019 11:31:02
- */
 public class Player {
 
-	private int life;
+	private int life = 3;
 	private static int points;
+	private String ID;
+	private Orangutan og;
 
 	//Új játékos létrehozása
-	public Player(){
+	public Player(String ID){
 		points = 0;
+		this.ID=ID;
+		nextOrangutan();
 	}
 
 
@@ -38,6 +38,11 @@ public class Player {
 	}
 
 	public void nextOrangutan(){
-
+		og = new Orangutan(ID.substring(1));
+		
+	}
+	
+	public int getLife(){
+		return life;
 	}
 }//end Player

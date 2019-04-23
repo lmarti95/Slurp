@@ -7,9 +7,7 @@ import java.util.ArrayList;
 
 import board.*;
 import characters.*;
-import game.Game;
-import game.Steppable;
-import game.Timer;
+import game.*;
 
 //interaction class felhasznalo bevitelek kezelesere
 public class Interaction {
@@ -121,6 +119,10 @@ public class Interaction {
 					System.out.println(list.get(i).getID() + "\t" + neighbours + "\t" + type + "\t"  + list.get(i).getDurability());
 				}
 			}
+			break;
+		//Add Player
+		case 9:
+			g.getMap().addPlayer(new Player(words[2]));
 			break;
 		// Place Panda
 		case 10:
