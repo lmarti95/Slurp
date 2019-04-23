@@ -2,6 +2,7 @@
 package board;
 
 import characters.Animal;
+import characters.Panda;
 import game.Steppable;
 
 /**
@@ -20,6 +21,10 @@ public class VendingMachine extends Tile implements Steppable {
 	}
 	public void step(){
 
+	}
+	
+	public void control(){
+		reduceDurability();
 	}
 
 	/**

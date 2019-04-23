@@ -170,7 +170,24 @@ public class Interaction {
 		case MOVE_PANDA:
 			g.getMap().getPanda(words[0]).move(g.getMap().getTile(words[1]));
 			break;
+		case LIST_PLAYERS:
+			ArrayList<Player> players_list = g.getMap().getPlayers();
+			if(players_list == null) {
+				return;
+			}
+			for(int i=0;i<players_list.size();i++) {
+				Player pl = players_list.get(i);
+				Logger.log(
+						pl.getID() + "\t" + pl.getOrangutan().getID() + "\t" + pl.getPoints() + "\t" + pl.getLife());
+			}
+			break;
+			
+		case CONTROL_THINGS:
+			g.getMap().getTile(words[0]).control();
+			break;
 		}
+		
+			
 	}
 
 	public static void placePanda(Panda p, String tileID) {

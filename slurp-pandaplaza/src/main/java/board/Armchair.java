@@ -1,6 +1,7 @@
 package board;
 
 import characters.Animal;
+import characters.Panda;
 
 /**
  * @author User
@@ -13,6 +14,17 @@ public class Armchair extends Tile {
 		super(ID, durability);
 	}
 
+	public void control(){
+		Panda pandaBehind =(Panda) animal;
+		while(pandaBehind != null) {
+			pandaBehind.setFollowed(null);
+			pandaBehind = pandaBehind.getFollower();
+		}
+		Panda p = (Panda) animal;
+		p.getFollowed().setFollower(null);
+		p.setFollowed(null);
+	}
+	
 	/**
 	 * 
 	 * @param animal
