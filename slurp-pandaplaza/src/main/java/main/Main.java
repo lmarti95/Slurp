@@ -147,7 +147,7 @@ public class Main {
     //Játék incializálása
     //Új játékos, játék és orángután
     public static void init(){
-    	player = new Player();
+    	//player = new Player();
     	Game g = new Game();
     	g.initMap();
     	//orangutan = new Orangutan();

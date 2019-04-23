@@ -4,14 +4,8 @@ package board;
 import java.util.ArrayList;
 
 import characters.Panda;
-import game.Steppable;
-import game.Timer;
+import game.*;
 
-/**
- * @author User
- * @version 1.0
- * @created 24-m�rc.-2019 11:30:55
- */
 public class Map {
 
 	// bejárat
@@ -19,10 +13,12 @@ public class Map {
 
 	private ArrayList<Tile> tilesList;
 	private static ArrayList<Panda> pandaList;
+	private static ArrayList<Player> playerList;
 
 	public Map() {
 		tilesList = new ArrayList<Tile>();
 		pandaList = new ArrayList<Panda>();
+		playerList = new ArrayList<Player>();
 	}
 
 	public void finalize() throws Throwable {
@@ -66,6 +62,14 @@ public class Map {
 
 	public static void removePanda(Panda p){
 		pandaList.remove(p);
+	}
+	
+	public static void addPlayer(Player p){
+		playerList.add(p);
+	}
+
+	public static void removePlayer(Player p){
+		playerList.remove(p);
 	}
 	
 	public static  ArrayList<Panda> getPandaList(){
