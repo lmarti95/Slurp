@@ -39,7 +39,7 @@ public class Player {
 
 	public void nextOrangutan(){
 		og = new Orangutan(ID.substring(1));
-		
+		Game.getMap().getEntry().setAnimal(og);
 	}
 	
 	public int getLife(){
