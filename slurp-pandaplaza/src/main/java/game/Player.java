@@ -27,6 +27,7 @@ public class Player {
 	 * Játékos álltal irányított orángután
 	 */
 	private Orangutan og;
+	private int nextID = 1;
 
 	/**
 	 * Új játékos létrehozása
@@ -70,8 +71,10 @@ public class Player {
 	 * Új orángután felhelyezése a pályára
 	 */
 	public void nextOrangutan(){
-		og = new Orangutan(ID.substring(1));
-		Game.getMap().getEntry().setAnimal(og);
+		if(life > 0) {
+			og = new Orangutan(ID.substring(nextID));
+			Game.getMap().getEntry().setAnimal(og);
+		}
 	}
 
 	/**
@@ -90,6 +93,12 @@ public class Player {
 		return life;
 	}
 
+	public void reduceLife() {
+		life--;
+		nextID++;
+		nextOrangutan();
+	}
+	
 
 	/**
 	 * Játékos azonosítóját megadó függvény

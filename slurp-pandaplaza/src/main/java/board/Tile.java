@@ -57,7 +57,9 @@ public class Tile {
 	 * A csempe élettartamát csökkentő függvény
 	 */
 	public void reduceDurability() {
-		durability--;
+		if(durability >0) {
+			durability--;
+		}
 	}
 
 	/**
@@ -113,7 +115,12 @@ public class Tile {
 	public void steppedOn(Animal animal) {
 		animal.leavePrevLocation(this);
 		reduceDurability();
-		setAnimal(animal);
+		if(durability==0) {
+			animal.die();
+		} else {
+			setAnimal(animal);
+		}
+		
 	}
 
 	/**

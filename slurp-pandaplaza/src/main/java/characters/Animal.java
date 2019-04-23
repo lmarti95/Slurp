@@ -41,11 +41,16 @@ public abstract class Animal {
 	/**
 	 * Minden állat meg tud halni, pl. ha leesik agy törött csempén.
 	 */
-	public void die(){ }
+	public void die(){
+		Panda behind = follower;
+		while(behind != null) {
+				behind.setFollowed(null);
+				Panda behind2 = behind;
+				behind=behind.getFollower();
+				behind2.setFollower(null);
+		}
+	}
 
-	/**
-	 * A metódus hívására az absztrakt Animal elhagyja a játékteret. Az állat a kilépés utána bejáratra kerül.
-	 */
 	public void exit(){
 		follower = null;
 		Game.getMap().getEntry().steppedOn(this);
