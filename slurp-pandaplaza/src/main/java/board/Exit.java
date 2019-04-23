@@ -5,17 +5,22 @@ import characters.Animal;
 import characters.Panda;
 
 /**
- * @author User
- * @version 1.0
- * @created 24-m�rc.-2019 11:30:51
+ * Kijáratot tartalmazó csempe implementációja
  */
 public class Exit extends Tile {
 
+	/**
+	 * Konstruktor. Meghívja az ős konstruktorát.
+	 * @param ID a csempe azonosítója
+	 * @param durability a csempe erőssége vagy élettartama
+	 */
 	public Exit(String ID, int durability){
 		super(ID, durability);
 	}
 
-	//Az allatnak meghivodik a steppedOn metodusa ha ralep az exitre
+	/**
+	 * Az allatnak meghivodik a steppedOn metodusa ha ralep az exitre
+	 */
 	public void steppedOn(Animal animal){
 			//Az orangutantol lekerdezzuk a pandat ha koveti ot panda
 			Panda p = animal.getFollower();
@@ -29,4 +34,4 @@ public class Exit extends Tile {
 				p  = p.getFollower();
 			}
 	}
-}//end Exit
+}
