@@ -15,12 +15,16 @@ public class PlazaTest {
     @Test
     public void testInit() throws IOException {
        File result = new File("testResult.txt");
-        PrintWriter writer = new PrintWriter(result);
-        writer.print("");
-        writer.close();
+       clearFile(result);
        Interaction.listen(new FileReader("tests/input/initInput.txt"), true);
        File assertOut = new File("tests/output/initOutput.txt");
        Assert.assertTrue(FileUtils.contentEquals(result, assertOut));
+    }
+
+    private void clearFile(File f) throws FileNotFoundException {
+        PrintWriter writer = new PrintWriter(f);
+        writer.print("");
+        writer.close();
     }
 
 }
