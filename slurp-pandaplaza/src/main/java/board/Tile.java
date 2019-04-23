@@ -27,7 +27,9 @@ public class Tile {
 	}
 
 	public void reduceDurability() {
-		durability--;
+		if(durability >0) {
+			durability--;
+		}
 	}
 	
 	//implementalva van az orokolt osztalyokban
@@ -60,7 +62,12 @@ public class Tile {
 	public void steppedOn(Animal animal) {
 		animal.leavePrevLocation(this);
 		reduceDurability();
-		setAnimal(animal);
+		if(durability==0) {
+			animal.die();
+		} else {
+			setAnimal(animal);
+		}
+		
 	}
 
 	public void setAnimal(Animal a) {

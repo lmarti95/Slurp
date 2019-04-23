@@ -1,6 +1,10 @@
 package characters;
 
+import game.Game;
+import game.Player;
 import game.Timer;
+
+import java.util.ArrayList;
 
 /**
  * @author User
@@ -36,7 +40,15 @@ public class Orangutan extends Animal {
 			panda.getLocation().setAnimal(panda);
 	}
 	public void die(){
-
+		super.die();
+		ArrayList<Player> players2 = Game.getMap().getPlayers();
+		Player pl = null;
+		for(int i=0;i<players2.size();i++) {
+			if(getID().charAt(1) == players2.get(i).getID().charAt(2)) {
+				 pl = players2.get(i);
+			}
+		}
+		pl.reduceLife();
 	}
 
 }//end Orangutan

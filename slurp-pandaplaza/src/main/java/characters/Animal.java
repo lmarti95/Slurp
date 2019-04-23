@@ -21,7 +21,13 @@ public abstract class Animal {
 	}
 
 	public void die(){
-
+		Panda behind = follower;
+		while(behind != null) {
+				behind.setFollowed(null);
+				Panda behind2 = behind;
+				behind=behind.getFollower();
+				behind2.setFollower(null);
+		}
 	}
 
 	//Az orángután kilép, a Panda exit metódusa felül van definiálva

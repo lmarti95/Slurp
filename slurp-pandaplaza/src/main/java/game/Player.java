@@ -9,6 +9,7 @@ public class Player {
 	private static int points;
 	private String ID;
 	private Orangutan og;
+	private int nextID = 1;
 
 	//Új játékos létrehozása
 	public Player(String ID){
@@ -38,8 +39,10 @@ public class Player {
 	}
 
 	public void nextOrangutan(){
-		og = new Orangutan(ID.substring(1));
-		Game.getMap().getEntry().setAnimal(og);
+		if(life > 0) {
+			og = new Orangutan(ID.substring(nextID));
+			Game.getMap().getEntry().setAnimal(og);
+		}
 	}
 	
 	public Orangutan getOrangutan() {
@@ -50,7 +53,12 @@ public class Player {
 		return life;
 	}
 
-
+	public void reduceLife() {
+		life--;
+		nextID++;
+		nextOrangutan();
+	}
+	
 	public String getID() {
 		return ID;
 	}
