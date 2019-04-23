@@ -3,19 +3,19 @@ package game;
 import board.Map;
 
 /**
- * A jÃ¡tÃ©kot reprezentÃ¡lÃ³ osztÃ¡ly. Ez vÃ©gzi a jÃ¡tÃ©k elindÃ­tÃ¡sÃ¡t Ã©s vÃ©gÃ©nek vizsgÃ¡latÃ¡t.
+ * A játékot reprezentáló osztály. Ez végzi a játék elindítását és végének vizsgálatát.
  */
 public class Game {
 	
 	private static Game single_instance=null;
 
 	/**
-	 * Minden jÃ¡tÃ©k egy jÃ¡tÃ©kteren jÃ¡tszÃ³dik, ezt nyilvÃ¡n kell tartani
+	 * Minden játék egy játékteren játszódik, ezt nyilván kell tartani
 	 */
 	private static Map map;
 
 	/**
-	 * Konstruktor. LÃ©trehoz egy jÃ¡tÃ©kteret
+	 * Konstruktor. Létrehoz egy játékteret
 	 */
 	public Game(){
 		map = new Map();
@@ -23,36 +23,36 @@ public class Game {
 	}
 
 	/**
-	 * A jÃ¡tÃ©k vÃ©gÃ©t viszgÃ¡lÃ³ segÃ©dfÃ¼ggvÃ©ny
+	 * A játék végét viszgáló segédfüggvény
 	 */
 	public void endGame(){
 
 	}
 
 	/**
-	 * JÃ¡tÃ©ktÃ©r lÃ©trehozÃ¡sa
+	 * Játéktér létrehozása
 	 */
 	public void initMap(){
 
 	}
 
 	/**
-	 * Ãšj jÃ¡tÃ©k indÃ­tÃ¡sa
+	 * Új játék indítása
 	 */
 	public void newGame(){
 
 	}
 
 	/**
-	 * A jÃ¡tÃ©ktÃ©r lekÃ©rdezÃ©sÃ©t segÃ­tÅ‘ fÃ¼ggvÃ©ny
-	 * @return a jÃ¡tÃ©ktÃ©r
+	 * A játéktér lekérdezését segítõ függvény
+	 * @return a játéktér
 	 */
 	public static Map getMap(){
 		return map;
 	}
 
 	public static Game getInstance() {
-		
+		new Game();
 		return single_instance;
 	}
 }

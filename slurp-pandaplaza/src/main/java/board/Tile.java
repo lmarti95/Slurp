@@ -108,7 +108,7 @@ public class Tile {
 	}
 
 	/**
-	 * Segédfüggvény ami az állat lépését kezeli le. Átmozgatja az állatot az előző helyéről, csökkenti a
+	 * Segédfüggvény ami az állat lépését kezeli le. Atmozgatja az állatot az előző helyéről, csökkenti a
 	 * csempe élettartamát és befogadja az állatot.
 	 * @param animal az állat, ami a csempére lép
 	 */

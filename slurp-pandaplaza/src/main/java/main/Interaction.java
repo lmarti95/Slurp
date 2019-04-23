@@ -178,7 +178,7 @@ public class Interaction {
 			for(int i=0;i<players_list.size();i++) {
 				Player pl = players_list.get(i);
 				Logger.log(
-						pl.getID() + "\t" + pl.getOrangutan().getID() + "\t" + pl.getOrangutan().getLocation().getID() + "\t" + pl.getPoints() + "\t" + pl.getLife());
+						pl.getID() + "\t" + pl.getOrangutan().getID()  + "\t" + pl.getPoints() + "\t" + pl.getLife());
 			}
 			break;
 			
@@ -220,6 +220,9 @@ public class Interaction {
 	public static void initGame(){
 		if(g==null){
 			g = Game.getInstance();
+			if(g==null){
+				System.out.println("jaj");
+			}
 		}
 	}
 
