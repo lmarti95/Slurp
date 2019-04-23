@@ -1,0 +1,12 @@
+Add tile: T0 - -1
+Add tile: T1 - 1
+Add tile: T2 - 0
+Connect tiles: T0 T1
+Connect tiles: T1 T2
+Select entry: T0
+Add player: Pl1
+Place panda: P1 T1 LAZY
+Move orangutan: O1 T1
+Move orangutan: O1 T2
+List players
+List pandas

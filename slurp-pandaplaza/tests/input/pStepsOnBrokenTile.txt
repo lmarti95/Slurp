@@ -1,0 +1,9 @@
+Add tile: T0 - -1
+Add tile: T1 - 1
+Connect tiles: T0 T1
+Place panda: P1 T0
+List tiles
+List pandas
+Move panda: P1 T1
+List tiles
+List pandas

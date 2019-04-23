@@ -1,0 +1,5 @@
+Add tile: T0 - -1
+Add tile: T1 - -1
+Place panda: P1 T0 LAZY
+Move panda: P1 T1
+List pandas
