@@ -20,8 +20,6 @@ public enum Command {
     CONTROL_THINGS("Control things"),
     CONNECT_ORANGUTAN_PANDA("Connect oragutan panda"),
 
-
-
     ;
 
     private String command;
@@ -32,6 +30,15 @@ public enum Command {
 
     public String getCommand() {
         return command;
+    }
+
+    public static Command getCommandByValue(String cmd){
+        for(Command c : values()){
+            if(c.getCommand().equals(cmd)){
+                return c;
+            }
+        }
+        return null;
     }
 
 }

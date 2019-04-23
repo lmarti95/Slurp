@@ -1,8 +1,6 @@
 package main;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 
 import board.*;
@@ -15,20 +13,24 @@ public class Interaction {
 	private static ArrayList<String[]> commands = new ArrayList<String[]>();
 	private static Game g;
 
-	public static void listen() throws IOException {
+	public static void listen(Reader in, boolean writeToFile) throws IOException {
 		//addCommands();
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		while (true) {
-			String line = br.readLine();
+		Logger.setToFile(writeToFile);
+		BufferedReader br = new BufferedReader(in);
+		String line;
+		while ((line = br.readLine()) != null) {
 			String[] lineArray=line.split(":");
 			String command = lineArray[0];
-			String params = lineArray[1];
-			try {
-				Command cmd = Command.valueOf(command);
-				work(cmd, params);
+			String params = "";
+			if(lineArray.length>1) {
+				params = lineArray[1];
+			}
 
-			} catch (IllegalArgumentException e){
-				System.out.println("No such command found, please try another!");
+				Command cmd = Command.getCommandByValue(command);
+			if(cmd != null) {
+				work(cmd, params);
+			}else {
+				Logger.log("No such command found, please try another!");
 			}
 
 		}
@@ -88,12 +90,12 @@ public class Interaction {
 					if(g.getMap().getEntry()==list.get(i)) {
 						type ="ENTRY";
 					}
-					System.out.println(list.get(i).getID() + "\t" + neighbours + "\t" + type + "\t"  + list.get(i).getDurability());
+					Logger.log(list.get(i).getID() + "\t" + neighbours + "\t" + type + "\t"  + list.get(i).getDurability());
 				}
 			}
 			break;
 		//Add Player
-		case 9:
+		case ADD_PLAYER:
 			g.getMap().addPlayer(new Player(words[2]));
 			break;
 		// Place Panda
@@ -135,6 +137,9 @@ public class Interaction {
 		// List Pandas
 		case LIST_PANDAS:
 			ArrayList<Panda> pandas = g.getMap().getPandaList();
+			if(pandas == null){
+				return;
+			}
 			for (int i = 0; i < pandas.size(); i++) {
 				Panda p = pandas.get(i);
 				String type = p.getClass().toString().substring(22).toUpperCase();
@@ -150,7 +155,7 @@ public class Interaction {
 				} else {
 					follower = p.getFollower().getID();
 				}
-				System.out.println(
+				Logger.log(
 						p.getID() + "\t" + type + "\t" + following + "\t" + follower + "\t" + p.getLocation().getID());
 			}
 			break;
@@ -164,4 +169,7 @@ public class Interaction {
 		g.getMap().addPanda(p);
 		Timer.addSteppable(p);
 	}
+
+
+
 }
