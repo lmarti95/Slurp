@@ -1,0 +1,139 @@
+Start new game
+Add tile: T0 - -1
+Select entry: T0
+Add tile: T1 - -1
+Add tile: T2 - -1
+Add tile: T3 - -1
+Add tile: T4 - -1
+Add tile: T5 - -1
+Add tile: T6 - -1
+Add tile: T7 - -1
+Add tile: T8 - -1
+Add tile: T9 - -1
+Add tile: T10 - -1
+Add tile: T11 - -1
+Add tile: T12 - -1
+Add tile: T13 - -1
+Add tile: T14 - -1
+Add tile: T15 - -1
+Add tile: T16 - -1
+Add tile: T17 - -1
+Add tile: T18 - -1
+Add tile: T19 - -1
+Add tile: T20 - 20
+Add tile: T21 - -1
+Add tile: T22 - -1
+Add tile: T23 - -1
+Add tile: T24 arcade -1
+Add tile: T25 - -1
+Add tile: T26 exit -1
+Add tile: T27 closet -1
+Add tile: T28 - -1
+Add tile: T29 - -1
+Add tile: T30 vendingMach -1
+Add tile: T31 - -1
+Add tile: T32 - -1
+Add tile: T33 - -1
+Add tile: T34 - -1
+Add tile: T35 - 20
+Add tile: T36 - -1
+Add tile: T37 - -1
+Add tile: T38 - -1
+Add tile: T39 - -1
+Add tile: T40 armchair -1
+Add tile: T41 closet -1
+Connect tiles: T0 T1
+Connect tiles: T0 T2
+Connect tiles: T0 T3
+Connect tiles: T0 T4
+Connect tiles: T0 T5
+Connect tiles: T0 T6
+Connect tiles: T0 T7
+Connect tiles: T1 T2
+Connect tiles: T2 T3
+Connect tiles: T3 T4
+Connect tiles: T4 T5
+Connect tiles: T4 T5
+Connect tiles: T4 T8
+Connect tiles: T4 T10
+Connect tiles: T5 T6
+Connect tiles: T5 T10
+Connect tiles: T5 T20
+Connect tiles: T5 T21
+Connect tiles: T6 T7
+Connect tiles: T6 T19
+Connect tiles: T8 T9
+Connect tiles: T8 T10
+Connect tiles: T9 T11
+Connect tiles: T10 T11
+Connect tiles: T10 T21
+Connect tiles: T10 T22
+Connect tiles: T10 T23
+Connect tiles: T10 T24
+Connect tiles: T11 T12
+Connect tiles: T11 T24
+Connect tiles: T12 T13
+Connect tiles: T12 T24
+Connect tiles: T13 T14
+Connect tiles: T13 T15
+Connect tiles: T13 T24
+Connect tiles: T14 T16
+Connect tiles: T14 T17
+Connect tiles: T15 T16
+Connect tiles: T15 T24
+Connect tiles: T15 T25
+Connect tiles: T15 T26
+Connect tiles: T16 T17
+Connect tiles: T16 T18
+Connect tiles: T16 T26
+Connect tiles: T17 T18
+Connect tiles: T18 T26
+Connect tiles: T19 T20
+Connect tiles: T20 T21
+Connect tiles: T20 T27
+Connect tiles: T21 T22
+Connect tiles: T22 T23
+Connect tiles: T22 T28
+Connect tiles: T22 T30
+Connect tiles: T23 T30
+Connect tiles: T23 T31
+Connect tiles: T23 T24
+Connect tiles: T24 T25
+Connect tiles: T24 T31
+Connect tiles: T24 T34
+Connect tiles: T25 T26
+Connect tiles: T25 T34
+Connect tiles: T25 T37
+Connect tiles: T26 T37
+Connect tiles: T26 T38
+Connect tiles: T26 T41
+Connect tiles: T27 T29
+Connect tiles: T28 T29
+Connect tiles: T28 T30
+Connect tiles: T29 T30
+Connect tiles: T30 T31
+Connect tiles: T30 T32
+Connect tiles: T30 T33
+Connect tiles: T31 T32
+Connect tiles: T31 T34
+Connect tiles: T32 T33
+Connect tiles: T32 T35
+Connect tiles: T33 T36
+Connect tiles: T34 T35
+Connect tiles: T35 T36
+Connect tiles: T35 T37
+Connect tiles: T35 T39
+Connect tiles: T36 T40
+Connect tiles: T37 T38
+Connect tiles: T38 T39
+Connect tiles: T38 T41
+Connect tiles: T39 T40
+Connect closets: T27 T41
+Place panda: P0 T8 LAZY
+Place panda: P1 T11 BEEP
+Place panda: P2 T16 TINKLE
+Place panda: P3 T18 LAZY
+Place panda: P4 T22 BEEP
+Place panda: P5 T36 TINKLE
+List tiles
+List pandas
