@@ -54,7 +54,7 @@ public class Orangutan extends Animal {
 		ArrayList<Player> players2 = Game.getMap().getPlayers();
 		Player pl = null;
 		for(int i=0;i<players2.size();i++) {
-			if(getID().charAt(1) == players2.get(i).getID().charAt(2)) {
+			if(getID().charAt(2) == players2.get(i).getID().charAt(2)) {
 				 pl = players2.get(i);
 			}
 		}

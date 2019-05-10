@@ -1,3 +1,4 @@
+Start new game
 Add tile: T0 - -1
 Add tile: T1 - 20
 Add tile: T2 - 1
