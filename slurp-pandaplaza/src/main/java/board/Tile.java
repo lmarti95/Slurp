@@ -1,8 +1,8 @@
-package board;
+package main.java.board;
 
 import java.util.ArrayList;
 
-import characters.Animal;
+import main.java.characters.Animal;
 
 /**
  * A játéktér egy mezejét reprezentáló osztály

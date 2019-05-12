@@ -1,8 +1,8 @@
-package main;
+package main.java.main;
 
-import characters.Orangutan;
-import game.Game;
-import game.Player;
+import main.java.characters.Orangutan;
+import main.java.game.Player;
+import main.java.ui.MenuWindow;
 
 import java.io.*;
 import java.util.logging.Logger;
@@ -24,10 +24,10 @@ public class Main {
         System.out.println(r.readLine());*/
 
     	//Interaction.listen(new FileReader("initInput"), true);
-        Interaction.listen(new InputStreamReader(System.in), false);
-        bufferRead = new BufferedReader(new InputStreamReader(System.in));
+//        Interaction.listen(new InputStreamReader(System.in), false);
+//        bufferRead = new BufferedReader(new InputStreamReader(System.in));
 
-
+        new MenuWindow();
     }
 
 }

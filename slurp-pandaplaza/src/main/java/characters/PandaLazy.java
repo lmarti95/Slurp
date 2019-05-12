@@ -1,6 +1,4 @@
-package characters;
-
-import characters.Panda;
+package main.java.characters;
 
 /**
  * Olyan panda, aki a fotelre reagál

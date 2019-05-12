@@ -1,4 +1,4 @@
-package game;
+package main.java.game;
 
 /**
  * Interface a körökre osztott működés egységes lekezeléséhez

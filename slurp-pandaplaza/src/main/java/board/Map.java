@@ -1,9 +1,9 @@
-package board;
+package main.java.board;
 
 import java.util.ArrayList;
 
-import characters.Panda;
-import game.*;
+import main.java.characters.Panda;
+import main.java.game.*;
 
 /**
  * Játékteret reprezentáló objektum. Nyílvántartja és kezeli a pandákat és a játékosokat
@@ -13,12 +13,12 @@ public class Map {
 	/**
 	 * A játéktér megjegyzi a bejáratot
 	 */
-	private Tile entry;
+	private static Tile entry;
 
 	/**
 	 * A játéktér tárolja a mezőit
 	 */
-	private ArrayList<Tile> tilesList;
+	private static ArrayList<Tile> tilesList;
 
 	/**
 	 * A játéktér tárolja a pandákat
@@ -56,7 +56,7 @@ public class Map {
 	 * A bejáratot visszaadó függvény
 	 * @return a bejárat
 	 */
-	public Tile getEntry() {
+	public static Tile getEntry() {
 		return entry;
 	}
 
@@ -64,7 +64,7 @@ public class Map {
 	 * A bejáratot beállító függvény
 	 * @param t melyik csempe legyen a bejárat
 	 */
-	public void setEntry(Tile t) {
+	public static void setEntry(Tile t) {
 		entry=t;
 	}
 
@@ -72,7 +72,7 @@ public class Map {
 	 * Az összes csempét visszaadó függvény
 	 * @return a csempék listája
 	 */
-	public ArrayList<Tile> getTilesList() {
+	public static ArrayList<Tile> getTilesList() {
 		return tilesList;
 	}
 
@@ -80,7 +80,7 @@ public class Map {
 	 * Csempe hozzáadása a játéktérhez.
 	 * @param t az új csempe
 	 */
-	public void addTile(Tile t) {
+	public static void addTile(Tile t) {
 		tilesList.add(t);
 	}
 
@@ -89,7 +89,7 @@ public class Map {
 	 * @param tileID egyedi azonosító a kívánt csempéhez
 	 * @return a kívánt csempe objektum vagy null, ha nincs ilyen csempe
 	 */
-	public Tile getTile(String tileID) {
+	public static Tile getTile(String tileID) {
 		for (int i = 0; i < tilesList.size(); i++) {
 			if (tilesList.get(i).getID().equals(tileID)) {
 				return tilesList.get(i);
@@ -103,7 +103,7 @@ public class Map {
 	 * @param pandaID egyedi azonosító a kívánt pandához
 	 * @return a kívánt panda objektum vagy null, ha nincs ilyen panda
 	 */
-	public Panda getPanda(String pandaID) {
+	public static Panda getPanda(String pandaID) {
 		for (int i = 0; i < pandaList.size(); i++) {
 			if (pandaList.get(i).getID().equals(pandaID)) {
 				return pandaList.get(i);
@@ -116,7 +116,7 @@ public class Map {
 	 * Segédfüggvény, ami visszadja a játékosokat
 	 * @return a játékosok listája
 	 */
-	public  ArrayList<Player> getPlayers(){
+	public static  ArrayList<Player> getPlayers(){
 		return playerList;
 	}
 

@@ -1,7 +1,7 @@
-package board;
+package main.java.board;
 
-import characters.Animal;
-import characters.Panda;
+import main.java.characters.Animal;
+import main.java. characters.Panda;
 
 /**
  * Fotelt tartalmazó csempe osztály

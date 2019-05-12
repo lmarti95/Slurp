@@ -1,8 +1,7 @@
+package main.java.board;
 
-package board;
-
-import characters.Animal;
-import game.Steppable;
+import main.java.characters.Animal;
+import main.java.game.Steppable;
 
 /**
  * A teleportáló szekrényt tartalmazó csempét modellező osztály implementációja

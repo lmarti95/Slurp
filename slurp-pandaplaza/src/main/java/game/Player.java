@@ -1,7 +1,7 @@
-package game;
+package main.java.game;
 
-import board.Tile;
-import characters.Orangutan;
+import main.java.board.Tile;
+import main.java.characters.Orangutan;
 
 /**
  * Játékost reprezentáló osztály

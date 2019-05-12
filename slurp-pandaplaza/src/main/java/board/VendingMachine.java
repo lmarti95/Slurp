@@ -1,9 +1,7 @@
+package main.java.board;
 
-package board;
-
-import characters.Animal;
-import characters.Panda;
-import game.Steppable;
+import main.java.characters.Animal;
+import main.java.game.Steppable;
 
 /**
  * Csokiautómatát tartalmazó csempét modellező osztály reprezentációja

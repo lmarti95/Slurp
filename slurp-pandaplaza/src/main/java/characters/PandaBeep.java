@@ -1,4 +1,4 @@
-package characters;
+package main.java.characters;
 
 /**
  * Olyan pandát reprezentáló osztály, aki a játékgép csilingelésére reagál.

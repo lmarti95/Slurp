@@ -1,8 +1,7 @@
-package characters;
+package main.java.characters;
 
-import characters.Animal;
-import game.Steppable;
-import game.Player;
+import main.java.game.Player;
+import main.java.game.Steppable;
 
 /**
  * Az osztály a játékos álltal elkapható pandákat reprezentálja.

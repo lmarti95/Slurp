@@ -1,11 +1,12 @@
-package main;
+package main.java.main;
 
-import java.io.*;
+import main.java.board.*;
+import main.java.characters.*;
+import main.java.game.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.Reader;
 import java.util.ArrayList;
-
-import board.*;
-import characters.*;
-import game.*;
 
 //interaction class felhasznalo bevitelek kezelesere
 public class Interaction {

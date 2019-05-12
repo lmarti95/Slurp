@@ -1,8 +1,8 @@
-package board;
+package main.java.board;
 
-import characters.Animal;
-import characters.Panda;
-import game.Steppable;
+import main.java.characters.Animal;
+import main.java.characters.Panda;
+import main.java.game.Steppable;
 
 /**
  * Játékautómatát tartalmazó csempe osztály implementációja

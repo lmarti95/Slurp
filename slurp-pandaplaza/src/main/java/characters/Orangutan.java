@@ -1,8 +1,8 @@
-package characters;
+package main.java.characters;
 
-import game.Game;
-import game.Player;
-import game.Timer;
+import main.java.game.Game;
+import main.java.game.Player;
+import main.java.game.Timer;
 
 import java.util.ArrayList;
 

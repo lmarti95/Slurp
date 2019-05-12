@@ -1,14 +1,12 @@
-package inputTest;
+package test.java.inputTest;
 
-import main.Interaction;
+import main.java.main.Interaction;
 import org.apache.commons.io.FileUtils;
 import org.junit.*;
 
 import java.io.*;
 
 public class PlazaTest {
-
-
     @Before
     public void initTest() throws FileNotFoundException {
         Interaction.initGame();

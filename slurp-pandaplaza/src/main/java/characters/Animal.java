@@ -1,8 +1,7 @@
-package characters;
+package main.java.characters;
 
-import board.Tile;
-import board.Map;
-import game.Game;
+import main.java.board.Tile;
+import main.java.game.Game;
 
 /**
  * Animal absztrakt ősosztály. Felelőssége az állatok közös tulajdonságainak összefogása

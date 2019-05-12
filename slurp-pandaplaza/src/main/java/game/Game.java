@@ -1,21 +1,21 @@
-package game;
+package main.java.game;
 
-import board.Map;
+import main.java.board.Map;
 
 /**
- * A játékot reprezentáló osztály. Ez végzi a játék elindítását és végének vizsgálatát.
+ * A jï¿½tï¿½kot reprezentï¿½lï¿½ osztï¿½ly. Ez vï¿½gzi a jï¿½tï¿½k elindï¿½tï¿½sï¿½t ï¿½s vï¿½gï¿½nek vizsgï¿½latï¿½t.
  */
 public class Game {
 	
 	private static Game single_instance=null;
 
 	/**
-	 * Minden játék egy játékteren játszódik, ezt nyilván kell tartani
+	 * Minden jï¿½tï¿½k egy jï¿½tï¿½kteren jï¿½tszï¿½dik, ezt nyilvï¿½n kell tartani
 	 */
 	private static Map map;
 
 	/**
-	 * Konstruktor. Létrehoz egy játékteret
+	 * Konstruktor. Lï¿½trehoz egy jï¿½tï¿½kteret
 	 */
 	public Game(){
 		map = new Map();
@@ -23,29 +23,29 @@ public class Game {
 	}
 
 	/**
-	 * A játék végét viszgáló segédfüggvény
+	 * A jï¿½tï¿½k vï¿½gï¿½t viszgï¿½lï¿½ segï¿½dfï¿½ggvï¿½ny
 	 */
 	public void endGame(){
 
 	}
 
 	/**
-	 * Játéktér létrehozása
+	 * Jï¿½tï¿½ktï¿½r lï¿½trehozï¿½sa
 	 */
 	public void initMap(){
 
 	}
 
 	/**
-	 * Új játék indítása
+	 * ï¿½j jï¿½tï¿½k indï¿½tï¿½sa
 	 */
 	public void newGame(){
 
 	}
 
 	/**
-	 * A játéktér lekérdezését segítõ függvény
-	 * @return a játéktér
+	 * A jï¿½tï¿½ktï¿½r lekï¿½rdezï¿½sï¿½t segï¿½tï¿½ fï¿½ggvï¿½ny
+	 * @return a jï¿½tï¿½ktï¿½r
 	 */
 	public static Map getMap(){
 		return map;
