@@ -64,7 +64,7 @@ public class gameController {
 		try {
 			Interaction.listen(
 					new InputStreamReader(new FileInputStream(
-							"C:/Users/Anami/Documents/GitHub/Slurp/slurp-pandaplaza/src/main/java/main/init.txt")),
+							"init.txt")),
 					false);
 			String line = "pl1";
 			Command ad = Command.getCommandByValue("Add player");
