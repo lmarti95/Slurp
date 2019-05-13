@@ -41,7 +41,4 @@ public class Armchair extends Tile {
 	 * A csempére lépés modellezése
 	 * @param animal az csempére lépő állat
 	 */
-	public void steppedOn(Animal animal){
-
-	}
 }

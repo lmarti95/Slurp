@@ -16,7 +16,7 @@ public class Player {
 	/**
 	 * Kapont pontok száma
 	 */
-	private static int points;
+	private int points = 0;
 
 	/**
 	 * Játékos egyedi azonosítója
@@ -46,7 +46,7 @@ public class Player {
 	/**
 	 * Játéékos pontot kap.
 	 */
-	public static void addPoints(){
+	public void addPoints(){
 		points++;
 	}
 
@@ -54,7 +54,7 @@ public class Player {
 	 * Pontok lekérdezésére szoilgáló segédfüggvény
 	 * @return megszerzett pontok
 	 */
-	public static int getPoints(){
+	public int getPoints(){
 		return points;
 	}
 

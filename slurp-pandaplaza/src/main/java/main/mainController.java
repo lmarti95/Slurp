@@ -27,17 +27,6 @@ public class mainController {
 
 	 @FXML
 	   private Button exit;
-/*
-	 @FXML
-	 public void loadNewGame(ActionEvent event) throws IOException {
-	     Parent parent = FXMLLoader.load(getClass().getResource("newgame.fxml"));
-	     Scene scene = new Scene(parent);
-	     Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-	     appStage.setScene(scene);
-	     appStage.show();
-	 }
-
-*/
 
 	 @FXML
 	 public void loadNewGame(ActionEvent event) throws IOException {

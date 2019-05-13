@@ -53,6 +53,10 @@ public class Tile {
 		return ID;
 	}
 
+	public Animal getAnimal(){
+		return animal;
+	}
+	
 	/**
 	 * A csempe élettartamát csökkentő függvény
 	 */

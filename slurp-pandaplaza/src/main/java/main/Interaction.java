@@ -14,28 +14,27 @@ public class Interaction {
 	private static Game g;
 
 	public static void listen(Reader in, boolean writeToFile) throws IOException {
-		//addCommands();
-		Logger.setToFile(writeToFile);
+		// addCommands();
+		// Logger.setToFile(writeToFile);
 		BufferedReader br = new BufferedReader(in);
 		String line;
 		while ((line = br.readLine()) != null) {
-			String[] lineArray=line.split(":");
+			String[] lineArray = line.split(":");
 			String command = lineArray[0];
 			String params = "";
-			if(lineArray.length>1) {
+			if (lineArray.length > 1) {
 				params = lineArray[1].trim();
 			}
 
-				Command cmd = Command.getCommandByValue(command);
-			if(cmd != null) {
+			Command cmd = Command.getCommandByValue(command);
+			if (cmd != null) {
 				work(cmd, params);
-			}else {
+			} else {
 				Logger.log("No such command found, please try another!");
 			}
 
 		}
 	}
-
 
 	public static void work(Command cmd, String line) {
 		String[] words = line.split(" ");
@@ -83,18 +82,19 @@ public class Interaction {
 							neighbours = neighbours + "," + list.get(i).getNeighbours().get(j).getID();
 						}
 					}
-					String type = list.get(i).getClass().getSimpleName().toUpperCase();//.toString().substring(12).toUpperCase();
-					if(type.equals("TILE")) {
-						type="-";
+					String type = list.get(i).getClass().getSimpleName().toUpperCase();// .toString().substring(12).toUpperCase();
+					if (type.equals("TILE")) {
+						type = "-";
 					}
-					if(g.getMap().getEntry()==list.get(i)) {
-						type ="ENTRY";
+					if (g.getMap().getEntry() == list.get(i)) {
+						type = "ENTRY";
 					}
-					Logger.log(list.get(i).getID() + "\t" + neighbours + "\t" + type + "\t"  + list.get(i).getDurability());
+					Logger.log(
+							list.get(i).getID() + "\t" + neighbours + "\t" + type + "\t" + list.get(i).getDurability());
 				}
 			}
 			break;
-		//Add Player
+		// Add Player
 		case ADD_PLAYER:
 			g.getMap().addPlayer(new Player(words[0]));
 			break;
@@ -123,26 +123,26 @@ public class Interaction {
 			t1.addNeighbour(t2);
 			t2.addNeighbour(t1);
 			break;
-		//Connect Closets
+		// Connect Closets
 		case CONNECT_CLOSETS:
 			Closet c1 = (Closet) g.getMap().getTile(words[0]);
 			Closet c2 = (Closet) g.getMap().getTile(words[1]);
 			c1.setOtherCloset(c2);
 			c2.setOtherCloset(c1);
 			break;
-		//Select Entry
+		// Select Entry
 		case SELECT_ENTRY:
 			g.getMap().setEntry(g.getMap().getTile(words[0]));
 			break;
 		// List Pandas
 		case LIST_PANDAS:
 			ArrayList<Panda> pandas = g.getMap().getPandaList();
-			if(pandas == null){
+			if (pandas == null) {
 				return;
 			}
 			for (int i = 0; i < pandas.size(); i++) {
 				Panda p = pandas.get(i);
-				String type = p.getClass().getSimpleName().toUpperCase();//.toString().substring(22).toUpperCase();
+				String type = p.getClass().getSimpleName().toUpperCase();// .toString().substring(22).toUpperCase();
 				String follower;
 				String following;
 				if (p.getFollowed() == null) {
@@ -161,9 +161,9 @@ public class Interaction {
 			break;
 		case MOVE_ORANGUTAN:
 			ArrayList<Player> players = g.getMap().getPlayers();
-			for(int i=0;i<players.size();i++) {
-				if(words[0].charAt(1) == players.get(i).getID().charAt(2)) {
-					 players.get(i).getOrangutan().move(g.getMap().getTile(words[1]));
+			for (int i = 0; i < players.size(); i++) {
+				if (words[0].charAt(2) == players.get(i).getID().charAt(2)) {
+					players.get(i).getOrangutan().move(g.getMap().getTile(words[1]));
 				}
 			}
 			break;
@@ -172,30 +172,30 @@ public class Interaction {
 			break;
 		case LIST_PLAYERS:
 			ArrayList<Player> players_list = g.getMap().getPlayers();
-			if(players_list == null) {
+			if (players_list == null) {
 				return;
 			}
-			for(int i=0;i<players_list.size();i++) {
+			for (int i = 0; i < players_list.size(); i++) {
 				Player pl = players_list.get(i);
-				Logger.log(
-						pl.getID() + "\t" + pl.getOrangutan().getID()  + "\t" + pl.getPoints() + "\t" + pl.getLife());
+				Logger.log(pl.getID() + "\t" + pl.getOrangutan().getID() + "\t"
+						+ pl.getOrangutan().getLocation().getID() + "\t" + pl.getPoints() + "\t" + pl.getLife());
 			}
 			break;
-			
+
 		case CONTROL_THINGS:
 			g.getMap().getTile(words[0]).control();
 			break;
 		case CONNECT_ORANGUTAN_PANDA:
 			ArrayList<Player> players2 = g.getMap().getPlayers();
 			Orangutan og = null;
-			for(int i=0;i<players2.size();i++) {
-				if(words[0].charAt(1) == players2.get(i).getID().charAt(2)) {
-					 og = players2.get(i).getOrangutan();
+			for (int i = 0; i < players2.size(); i++) {
+				if (words[0].charAt(1) == players2.get(i).getID().charAt(2)) {
+					og = players2.get(i).getOrangutan();
 				}
 			}
 			Panda p = g.getMap().getPanda(words[1]);
 			Panda p_behind = og.getFollower();
-			if(p_behind == null) {
+			if (p_behind == null) {
 				og.setFollower(p);
 				p.setFollowed(og);
 				return;
@@ -206,8 +206,7 @@ public class Interaction {
 			og.setFollower(p);
 			break;
 		}
-		
-			
+
 	}
 
 	public static void placePanda(Panda p, String tileID) {
@@ -217,15 +216,13 @@ public class Interaction {
 		Timer.addSteppable(p);
 	}
 
-	public static void initGame(){
-		if(g==null){
+	public static void initGame() {
+		if (g == null) {
 			g = Game.getInstance();
-			if(g==null){
+			if (g == null) {
 				System.out.println("jaj");
 			}
 		}
 	}
-
-
 
 }

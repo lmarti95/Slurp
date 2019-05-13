@@ -12,7 +12,7 @@ public abstract class Animal {
 	/**
 	 * Minden állatot követ egy panda.
 	 */
-	private Panda follower;
+	protected Panda follower;
 
 	/**
 	 * Minden állat tudja hogy melyik csempén áll az aktuális körben
@@ -22,7 +22,7 @@ public abstract class Animal {
 	/**
 	 * Minden állat tudja, hogy melyik csempén állt az előző körben
 	 */
-	private Tile oldLocation;
+	protected Tile oldLocation;
 
 	/**
 	 * Minden állatot egy String azonosító egyértelműen azonosít

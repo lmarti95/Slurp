@@ -1,31 +1,321 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="start" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1041.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.mainController">
+<AnchorPane fx:id="start" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1041.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.gameController">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="1041.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/menu.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="newgame" alignment="CENTER" contentDisplay="CENTER" layoutX="405.0" layoutY="371.0" mnemonicParsing="false" onAction="#loadNewGame" opacity="0.0" prefHeight="25.0" prefWidth="100.0" textFill="#665f5e">
+      <Line endX="-51.0" endY="151.0" layoutX="122.0" layoutY="2.0" startX="-68.0" startY="133.0" />
+      <Line endX="204.0" endY="-177.0" layoutX="414.0" layoutY="572.0" startX="266.0" startY="-87.0" />
+      <Line endX="204.0" endY="-177.0" layoutX="424.0" layoutY="582.0" startX="118.0" startY="-239.0" />
+      <Line endX="25.0" endY="-216.0" layoutX="434.0" layoutY="592.0" startX="118.0" startY="-239.0" />
+      <Line endX="360.0" endY="-125.0" layoutX="424.0" layoutY="582.0" startX="266.0" startY="-118.0" />
+      <Line endX="360.0" endY="-125.0" layoutX="434.0" layoutY="592.0" startX="293.0" startY="-223.0" />
+      <Line endX="322.0" endY="-127.0" layoutX="444.0" layoutY="602.0" startX="335.0" startY="-28.0" />
+      <Line endX="328.0" endY="-142.0" layoutX="454.0" layoutY="612.0" startX="391.0" startY="-127.0" />
+      <Line endX="522.0" endY="-84.0" layoutX="464.0" layoutY="622.0" startX="391.0" startY="-127.0" />
+      <Line endX="522.0" endY="-84.0" layoutX="474.0" layoutY="632.0" startX="301.0" startY="-74.0" />
+      <Line endX="404.0" endY="-108.0" layoutX="496.0" layoutY="510.0" startX="381.0" startY="-28.0" />
+      <Line endX="404.0" endY="-108.0" layoutX="506.0" layoutY="520.0" startX="327.0" startY="-149.0" />
+      <Line endX="267.0" endY="-248.0" layoutX="516.0" layoutY="530.0" startX="327.0" startY="-149.0" />
+      <Line endX="267.0" endY="-248.0" layoutX="526.0" layoutY="540.0" startX="259.0" startY="-357.0" />
+      <Line endX="267.0" endY="-248.0" layoutX="536.0" layoutY="550.0" startX="194.0" startY="-179.0" />
+      <Line endX="98.0" endY="-162.0" layoutX="546.0" layoutY="560.0" startX="194.0" startY="-179.0" />
+      <Line endX="360.0" endY="-125.0" layoutX="444.0" layoutY="602.0" startX="386.0" startY="-233.0" />
+      <Line endX="74.0" endY="-186.0" layoutX="556.0" layoutY="570.0" startX="88.0" startY="-305.0" />
+      <Line endX="-18.0" endY="-239.0" layoutX="566.0" layoutY="580.0" startX="67.0" startY="-327.0" />
+      <Line endX="-164.0" endY="-350.0" layoutX="576.0" layoutY="590.0" startX="67.0" startY="-327.0" />
+      <Line endX="-78.0" endY="-469.0" layoutX="586.0" layoutY="600.0" startX="67.0" startY="-327.0" />
+      <Line endX="12.0" endY="-526.0" layoutX="596.0" layoutY="610.0" startX="67.0" startY="-327.0" />
+      <Line endX="89.0" endY="-519.0" layoutX="606.0" layoutY="620.0" startX="22.0" startY="-373.0" />
+      <Line endX="167.0" endY="-442.0" layoutX="616.0" layoutY="630.0" startX="22.0" startY="-373.0" />
+      <Line endX="156.0" endY="-361.0" layoutX="626.0" layoutY="640.0" startX="22.0" startY="-373.0" />
+      <Line endX="97.0" endY="-290.0" layoutX="636.0" layoutY="650.0" startX="22.0" startY="-373.0" />
+      <Line endX="81.0" endY="-234.0" layoutX="314.0" layoutY="472.0" startX="17.5" startY="-105.5" />
+      <Line endX="81.0" endY="-234.0" layoutX="324.0" layoutY="482.0" startX="125.0" startY="-103.0" />
+      <Line endX="81.0" endY="-234.0" layoutX="334.0" layoutY="492.0" startX="212.0" startY="-153.0" />
+      <Line endX="49.0" endY="-267.0" layoutX="354.0" layoutY="512.0" startX="163.0" startY="-372.0" />
+      <Line endX="44.0" endY="-269.0" layoutX="354.0" layoutY="512.0" startX="39.0" startY="-415.0" />
+      <Line endX="44.0" endY="-269.0" layoutX="364.0" layoutY="522.0" startX="-66.0" startY="-403.0" />
+      <Line endX="44.0" endY="-269.0" layoutX="374.0" layoutY="532.0" startX="-113.0" startY="-315.0" />
+      <Line endX="-25.0" endY="-282.0" layoutX="384.0" layoutY="542.0" startX="-125.0" startY="-218.0" />
+      <Line endX="12.0" endY="59.0" layoutX="255.0" layoutY="164.0" startX="45.0" startY="-38.0" />
+      <Line endX="107.0" endY="-78.0" layoutX="265.0" layoutY="174.0" startX="45.0" startY="-38.0" />
+      <Line endX="107.0" endY="-78.0" layoutX="275.0" layoutY="184.0" startX="240.0" startY="-61.0" />
+      <Line endX="323.0" endY="-106.0" layoutX="285.0" layoutY="194.0" startX="240.0" startY="-61.0" />
+      <Line endX="323.0" endY="-106.0" layoutX="295.0" layoutY="204.0" startX="410.0" startY="-94.0" />
+      <Line endX="486.0" endY="-28.0" layoutX="305.0" layoutY="214.0" startX="410.0" startY="-94.0" />
+      <Line endX="488.0" endY="-169.0" layoutX="315.0" layoutY="224.0" startX="394.0" startY="-127.0" />
+      <Line endX="479.0" endY="-181.0" layoutX="325.0" layoutY="234.0" startX="540.0" startY="-126.0" />
+      <Line endX="452.0" endY="-61.0" layoutX="335.0" layoutY="244.0" startX="540.0" startY="-126.0" />
+      <Line endX="572.0" endY="-222.0" layoutX="345.0" layoutY="254.0" startX="526.0" startY="-150.0" />
+      <Line endX="572.0" endY="-222.0" layoutX="355.0" layoutY="264.0" startX="649.0" startY="-156.0" />
+      <Line endX="568.0" endY="-234.0" layoutX="365.0" layoutY="274.0" startX="429.0" startY="-234.0" />
+      <Line endX="637.0" endY="-142.0" layoutX="345.0" layoutY="254.0" startX="538.0" startY="-142.0" />
+      <Line endX="637.0" endY="-142.0" layoutX="355.0" layoutY="264.0" startX="608.0" startY="-25.0" />
+      <Line endX="500.0" endY="-161.0" layoutX="365.0" layoutY="274.0" startX="608.0" startY="-25.0" />
+      <Line endX="417.0" endY="-99.0" layoutX="375.0" layoutY="284.0" startX="608.0" startY="-25.0" />
+      <Line endX="410.0" endY="-25.0" layoutX="385.0" layoutY="294.0" startX="539.0" startY="-49.0" />
+      <Line endX="439.0" endY="66.0" layoutX="395.0" layoutY="304.0" startX="539.0" startY="-49.0" />
+      <Line endX="512.0" endY="76.0" layoutX="405.0" layoutY="314.0" startX="539.0" startY="-49.0" />
+      <Line endX="592.0" endY="42.0" layoutX="415.0" layoutY="324.0" startX="539.0" startY="-49.0" />
+      <Line endX="592.0" endY="42.0" layoutX="425.0" layoutY="334.0" startX="488.0" startY="80.0" />
+      <Line endX="-52.0" endY="78.0" layoutX="190.0" layoutY="14.0" startX="-69.0" startY="185.0" />
+      <Line endX="80.0" endY="-63.0" layoutX="135.0" layoutY="200.0" startX="15.0" startY="1.0" />
+      <Line endX="100.0" layoutX="45.0" layoutY="97.0" startX="2.5" />
+      <Line endX="98.0" endY="21.0" layoutX="120.0" layoutY="112.0" startX="31.0" startY="-18.0" />
+      <Line endX="12.0" endY="59.0" layoutX="245.0" layoutY="154.0" startX="-26.0" startY="-18.0" />
+      <Line endX="20.0" endY="-95.0" layoutX="245.0" layoutY="321.0" startX="-92.0" startY="-95.0" />
+      <Line endX="5.0" endY="-86.0" layoutX="251.0" layoutY="321.0" startX="-2.0" />
+      <Line endX="100.0" layoutX="146.0" layoutY="344.0" startX="3.0" startY="12.0" />
+      <Line endX="88.5" endY="23.0" layoutX="63.0" layoutY="333.0" startX="-21.707107543945312" startY="-10.0" />
+      <Line endX="62.5" endY="-83.0" layoutX="41.0" layoutY="321.0" startX="-0.4141998291015625" startY="1.29290771484375" />
+      <Line endX="-50.0" endY="-61.0" layoutX="170.0" layoutY="332.0" startX="-17.79290771484375" startY="24.70709228515625" />
+      <Line endX="-4.0" layoutX="320.0" layoutY="367.0" startX="-77.0" startY="-27.0" />
+      <Line endX="104.0" endY="87.0" layoutX="135.0" layoutY="234.0" startX="-23.0" startY="-3.0" />
+      <Line endX="100.0" layoutX="183.0" layoutY="439.0" startX="-24.0" startY="11.0" />
+      <Line endX="4.0" endY="-2.0" layoutX="158.0" layoutY="451.0" startX="-7.0" startY="-97.0" />
+      <Line endX="-13.0" endY="-89.0" layoutX="259.0" layoutY="439.0" startX="7.0" startY="2.0" />
+      <Line endX="44.0" endY="-73.0" layoutX="284.0" layoutY="442.0" startX="-3.0" startY="2.0" />
+      <Line endX="26.0" endY="80.0" layoutX="294.0" layoutY="452.0" startX="-3.0" startY="2.0" />
+      <Line endX="91.0" endY="5.0" layoutX="294.0" layoutY="452.0" startX="-8.0" startY="-12.0" />
+      <Line endX="44.0" endY="-73.0" layoutX="294.0" layoutY="452.0" startX="98.0" startY="-1.0" />
+      <Line endX="137.0" endY="-77.0" layoutX="304.0" layoutY="462.0" startX="41.0" startY="-96.0" />
+      <Line endX="137.0" endY="-77.0" layoutX="314.0" layoutY="472.0" startX="211.0" startY="-12.0" />
+      <Line endX="73.0" endY="-18.0" layoutX="324.0" layoutY="482.0" startX="211.0" startY="-12.0" />
+      <Line endX="73.0" endY="-18.0" layoutX="334.0" layoutY="492.0" startX="95.0" startY="58.0" />
+      <Line endX="-19.0" endY="30.0" layoutX="344.0" layoutY="502.0" startX="80.0" startY="39.0" />
+      <Line endX="175.0" endY="-22.0" layoutX="354.0" layoutY="512.0" startX="80.0" startY="39.0" />
+      <Line endX="175.0" endY="-22.0" layoutX="364.0" layoutY="522.0" startX="271.0" startY="-124.0" />
+      <Line endX="175.0" endY="-22.0" layoutX="374.0" layoutY="532.0" startX="159.0" startY="-181.0" />
+      <Line endX="174.0" endY="-43.0" layoutX="384.0" layoutY="542.0" startX="217.0" startY="3.0" />
+      <Line endX="169.0" endY="-75.0" layoutX="394.0" layoutY="552.0" startX="266.0" startY="-87.0" />
+      <Line endX="220.0" endY="-17.0" layoutX="404.0" layoutY="562.0" startX="266.0" startY="-87.0" />
+      <ImageView fitHeight="600.0" fitWidth="1041.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="T1" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="66.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
          <font>
-            <Font name="Yu Gothic Light" size="1.0" />
+            <Font name="Yu Gothic Light" size="13.0" />
          </font></Button>
-      <Button fx:id="exit" alignment="CENTER" contentDisplay="CENTER" layoutX="645.0" layoutY="371.0" mnemonicParsing="false" onAction="#exit" opacity="0.0" prefHeight="25.0" prefWidth="62.0" textFill="#665f5e">
+      <Button fx:id="T3" alignment="CENTER" contentDisplay="CENTER" layoutX="170.0" layoutY="100.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
          <font>
-            <Font name="Yu Gothic Light" size="1.0" />
+            <Font name="Yu Gothic Light" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="loadgame" alignment="CENTER" contentDisplay="CENTER" layoutX="525.0" layoutY="371.0" mnemonicParsing="false" onAction="#loadLoadGame" opacity="0.0" prefHeight="25.0" prefWidth="100.0" textFill="#665f5e">
+      <Button fx:id="T2" alignment="CENTER" contentDisplay="CENTER" layoutX="94.0" layoutY="57.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
          <font>
-            <Font name="Yu Gothic Light" size="1.0" />
+            <Font name="Yu Gothic Light" size="13.0" />
          </font>
       </Button>
+
+    
+      <Button fx:id="T4" alignment="CENTER" contentDisplay="CENTER" layoutX="218.0" layoutY="180.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T5" alignment="CENTER" contentDisplay="CENTER" layoutX="204.0" layoutY="293.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T7" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="294.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T6" alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="313.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T19" alignment="CENTER" contentDisplay="CENTER" layoutX="119.0" layoutY="406.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T8" alignment="CENTER" contentDisplay="CENTER" layoutX="262.0" layoutY="86.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;" text="PANDA">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T9" alignment="CENTER" contentDisplay="CENTER" layoutX="349.0" layoutY="55.0" mnemonicParsing="false" onAction="#onClick" prefHeight="84.0" prefWidth="88.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T11" alignment="CENTER" contentDisplay="CENTER" layoutX="469.0" layoutY="88.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;" text="PANDA">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T12" alignment="CENTER" contentDisplay="CENTER" layoutX="571.0" layoutY="50.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T13" alignment="CENTER" contentDisplay="CENTER" layoutX="663.0" layoutY="69.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T14" alignment="CENTER" contentDisplay="CENTER" layoutX="752.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T17" alignment="CENTER" contentDisplay="CENTER" layoutX="881.0" layoutY="-1.0" mnemonicParsing="false" onAction="#onClick" prefHeight="84.0" prefWidth="88.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T18" alignment="CENTER" contentDisplay="CENTER" layoutX="952.0" layoutY="64.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;" text="PANDA">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T16" alignment="CENTER" contentDisplay="CENTER" layoutX="819.0" layoutY="74.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;" text="PANDA">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T15" alignment="CENTER" contentDisplay="CENTER" layoutX="743.0" layoutY="143.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T25" alignment="CENTER" contentDisplay="CENTER" layoutX="748.0" layoutY="237.0" mnemonicParsing="false" onAction="#onClick" prefHeight="84.0" prefWidth="88.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T37" alignment="CENTER" contentDisplay="CENTER" layoutX="786.0" layoutY="329.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T38" alignment="CENTER" contentDisplay="CENTER" layoutX="871.0" layoutY="358.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T41" alignment="CENTER" contentDisplay="CENTER" layoutX="961.0" layoutY="337.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;" text="CLOSET">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T40" alignment="CENTER" contentDisplay="CENTER" layoutX="925.0" layoutY="499.0" mnemonicParsing="false" onAction="#onClick" prefHeight="84.0" prefWidth="88.0" style="-fx-background-radius: 100;" text="ARMCHAIR">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T39" alignment="CENTER" contentDisplay="CENTER" layoutX="827.0" layoutY="456.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T35" alignment="CENTER" contentDisplay="CENTER" layoutX="730.0" layoutY="417.0" mnemonicParsing="false" onAction="#onClick" prefHeight="84.0" prefWidth="88.0" style="-fx-background-radius: 100;" text="BROKENTILE">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T36" alignment="CENTER" contentDisplay="CENTER" layoutX="732.0" layoutY="514.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;" text="PANDA">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T34" alignment="CENTER" contentDisplay="CENTER" layoutX="687.0" layoutY="339.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T31" alignment="CENTER" contentDisplay="CENTER" layoutX="586.0" layoutY="354.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T32" alignment="CENTER" contentDisplay="CENTER" layoutX="632.0" layoutY="437.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T33" alignment="CENTER" contentDisplay="CENTER" layoutX="570.0" layoutY="511.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T23" alignment="CENTER" contentDisplay="CENTER" layoutX="500.0" layoutY="311.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T22" alignment="CENTER" contentDisplay="CENTER" layoutX="406.0" layoutY="344.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;" text="PANDA">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T29" alignment="CENTER" contentDisplay="CENTER" layoutX="384.0" layoutY="510.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T27" alignment="CENTER" contentDisplay="CENTER" layoutX="275.0" layoutY="497.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;" text="CLOSET">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T28" alignment="CENTER" contentDisplay="CENTER" layoutX="353.0" layoutY="420.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T21" alignment="CENTER" contentDisplay="CENTER" layoutX="291.0" layoutY="328.0" mnemonicParsing="false" onAction="#onClick" prefHeight="77.0" prefWidth="81.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T20" alignment="CENTER" contentDisplay="CENTER" layoutX="209.0" layoutY="389.0" mnemonicParsing="false" onAction="#onClick" prefHeight="100.0" prefWidth="102.0" style="-fx-background-radius: 100;" text="BROKENTILE">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T30" alignment="CENTER" contentDisplay="CENTER" layoutX="472.0" layoutY="412.0" mnemonicParsing="false" onAction="#onClick" prefHeight="117.0" prefWidth="119.0" style="-fx-background-radius: 100;" text="VENDINGMACHINE">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T26" alignment="CENTER" contentDisplay="CENTER" layoutX="845.0" layoutY="152.0" mnemonicParsing="false" onAction="#onClick" prefHeight="184.0" prefWidth="188.0" style="-fx-background-radius: 100;" text="EXIT">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T10" alignment="CENTER" contentDisplay="CENTER" layoutX="319.0" layoutY="152.0" mnemonicParsing="false" onAction="#onClick" prefHeight="176.0" prefWidth="179.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T0" alignment="CENTER" contentDisplay="CENTER" ellipsisString="ASDASDF" layoutX="27.0" layoutY="144.0" mnemonicParsing="false" onAction="#onClick" prefHeight="160.0" prefWidth="163.0" style="-fx-background-radius: 100;" text="ENTRY" textOverrun="CLIP">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="T24" alignment="CENTER" contentDisplay="CENTER" layoutX="543.0" layoutY="153.0" mnemonicParsing="false" onAction="#onClick" prefHeight="184.0" prefWidth="188.0" style="-fx-background-radius: 100;" text="ARCADE">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button id="pointsbtn" fx:id="points" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="8.0" mnemonicParsing="false" onAction="#onClick" prefHeight="47.0" prefWidth="119.0" style="-fx-background-size: 50 75;" text="Points: 0, -">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      <Button id="turnbtn" fx:id="turn" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="535.0" mnemonicParsing="false" onAction="#onClick" prefHeight="47.0" prefWidth="119.0" style="-fx-background-size: 50 75;" text="Next Player: 1">
+         <font>
+            <Font name="Yu Gothic Light" size="13.0" />
+         </font>
+      </Button>
+      
    </children>
 </AnchorPane>

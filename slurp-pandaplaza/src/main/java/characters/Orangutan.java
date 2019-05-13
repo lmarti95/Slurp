@@ -6,6 +6,8 @@ import game.Timer;
 
 import java.util.ArrayList;
 
+import board.Tile;
+
 /**
  * A játékos álltal irányított orángutánt reprezentáló osztály.
  * Az Animal osztályból származik származik.
@@ -31,6 +33,7 @@ public class Orangutan extends Animal {
 	 * @param panda az elkapandó panda
 	 */
 	public void catchAnimal(Panda panda){
+			System.out.println("elkaptalak");
 			Timer.removeSteppable(panda);
 			//Panda követőinek átállítása
 			if(getFollower()!=null){
@@ -45,6 +48,7 @@ public class Orangutan extends Animal {
 			getLocation().setAnimal(this);
 			panda.getLocation().setAnimal(panda);
 	}
+	
 
 	/**
 	 * A függvény kezeli az orángután halálát.

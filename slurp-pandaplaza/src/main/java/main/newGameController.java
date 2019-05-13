@@ -31,25 +31,22 @@ public class newGameController {
 
 	 @FXML
 	 private void oneplayer(ActionEvent event) throws IOException {
-		 Main.setNrOfPlayers(0);
+		 Main.setNrOfPlayers(1);
 		 System.out.println("oneplayer");
-		 AnchorPane pane = FXMLLoader.load(getClass().getResource("game.fxml"));
-		 newgame.getChildren().setAll(pane);
 	 }
 	 @FXML
 	 private void twoplayer(ActionEvent event) throws IOException {
-		 Main.setNrOfPlayers(1);
+		 Main.setNrOfPlayers(2);
 		 System.out.println("twoplayer");
-		 AnchorPane pane = FXMLLoader.load(getClass().getResource("game.fxml"));
-		 newgame.getChildren().setAll(pane);
 	 }
 
 	 @FXML
 	 private void go(ActionEvent event) throws IOException {
-		 System.out.println("tortent vmi");
+		 
+		 AnchorPane pane = FXMLLoader.load(getClass().getResource("game.fxml"));
+		 newgame.getChildren().setAll(pane);
 	 }
-
-
+/*
 	 @FXML
 	 private void keyPressed(KeyEvent keyEvent) throws IOException {
 		 System.out.println("okes");
@@ -67,4 +64,5 @@ public class newGameController {
 			break;
 		 }
 	}
+*/
 }

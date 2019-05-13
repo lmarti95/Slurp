@@ -49,8 +49,9 @@ public class Main extends Application {
     	//Interaction.listen(new FileReader("initInput"), true);
 
     	launch(args);
-        Interaction.listen(new InputStreamReader(System.in), false);
-        bufferRead = new BufferedReader(new InputStreamReader(System.in));
+    	
+    //    Interaction.listen(new InputStreamReader(System.in), false);
+    //    bufferRead = new BufferedReader(new InputStreamReader(System.in));
 
     }
 
@@ -58,7 +59,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("mainnenu.fxml"));
         Scene scene = new Scene(root);
-        
+
 
         stage.setTitle("slurp__.exe");
         stage.setScene(scene);
@@ -83,5 +84,9 @@ public class Main extends Application {
     public static void setNrOfPlayers(int nr){
     	nrOfPlayers = nr;
     }
+
+	public static int getNrOfPlayers() {
+		return nrOfPlayers;
+	}
 
 }

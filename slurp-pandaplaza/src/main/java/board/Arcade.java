@@ -40,7 +40,4 @@ public class Arcade extends Tile implements Steppable {
 	 * A csempére lépés modellezése
 	 * @param animal az csempére lépő állat
 	 */
-	public void steppedOn(Animal animal){
-
-	}
 }

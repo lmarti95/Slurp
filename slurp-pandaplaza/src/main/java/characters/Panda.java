@@ -2,6 +2,8 @@ package characters;
 
 import characters.Animal;
 import game.Steppable;
+import main.gameController;
+import game.Game;
 import game.Player;
 
 /**
@@ -26,7 +28,7 @@ public abstract class Panda extends Animal implements Steppable {
 	 * Panda kimegy a kijáraton és a játékos kap pontot
 	 */
 	public void exit(){
-		Player.addPoints();
+		Game.getMap().getPlayers().get(gameController.currentPlayer-1).addPoints();
 	}
 
 	/**

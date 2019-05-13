@@ -37,11 +37,4 @@ public class VendingMachine extends Tile implements Steppable {
 		reduceDurability();
 	}
 
-	/**
-	 * A csempére lépés modellezése
-	 * @param animal az csempére lépő állat
-	 */
-	public void steppedOn(Animal animal){
-
-	}
 }
